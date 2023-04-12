@@ -1491,11 +1491,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d66338980f7822148a4fe1a289504465, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 3
+  moveSpeed: 8
   animator: {fileID: 8286761006868306321}
   stopTriggerLayer:
     serializedVersion: 2
     m_Bits: 64
+  canMove: 1
 --- !u!136 &920048668
 CapsuleCollider:
   m_ObjectHideFlags: 0

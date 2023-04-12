@@ -5,33 +5,37 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour
 {
     [SerializeField] private float moveSpeed;
+    [SerializeField] private float stopDistance;
+    [SerializeField] private bool isStopped = false; 
     [SerializeField] private Animator animator;
-    [SerializeField] private LayerMask stopTriggerLayer;
-    [SerializeField] private bool canMove = true;
+    [SerializeField] private Transform fortress;
 
     private void Update()
     {
         Move();
+        StopEnemy();
     }
 
     private void Move()
     {
-        if (!canMove) return;
+        if (isStopped) return;
 
         transform.Translate(Vector3.forward * Time.deltaTime * moveSpeed);
+    }
+
+    private void StopEnemy()
+    {
+        if (isStopped) return;
+
+        if(transform.position.x > fortress.position.x - stopDistance)
+        {
+            Shooting();
+            isStopped = true;
+        }
     }
 
     private void Shooting()
     {
         animator.SetTrigger("shoot");
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if(LayerMask.GetMask(LayerMask.LayerToName(other.gameObject.layer)) == stopTriggerLayer)
-        {
-            Shooting();
-            canMove = false;
-        }
     }
 }
