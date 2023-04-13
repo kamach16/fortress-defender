@@ -1492,11 +1492,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 8
+  stopDistance: 10
+  isStopped: 0
   animator: {fileID: 8286761006868306321}
-  stopTriggerLayer:
-    serializedVersion: 2
-    m_Bits: 64
-  canMove: 1
+  fortress: {fileID: 0}
 --- !u!136 &920048668
 CapsuleCollider:
   m_ObjectHideFlags: 0
