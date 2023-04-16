@@ -6,16 +6,17 @@ public class EnemyController : MonoBehaviour
 {
     [SerializeField] private float moveSpeed;
     [SerializeField] private float stopDistance;
+    [SerializeField] private float health;
     [SerializeField] private bool isStopped = false;
     [SerializeField] private bool isDied = false;
     [SerializeField] private Animator animator;
+    [SerializeField] private Collider[] myColliders;
     [SerializeField] private Transform fortress;
 
     private void Update()
     {
         Move();
         StopEnemy();
-        Die();
     }
 
     public void SetFortress(Transform fortress)
@@ -48,10 +49,28 @@ public class EnemyController : MonoBehaviour
 
     private void Die()
     {
-        if (Input.GetKeyDown(KeyCode.O))
+
+        animator.SetTrigger("death");
+        DisableColliders();
+        isDied = true;
+    }
+
+    private void DisableColliders()
+    {
+        foreach (Collider collider in myColliders)
         {
-            animator.SetTrigger("death");
-            isDied = true;
+            collider.enabled = false;
         }
+    }
+
+    public void TakeDamage(float damage)
+    {
+        if (isDied) return;
+
+        print(gameObject.name + " took damage");
+
+        health -= damage;
+
+        if (health <= 0) Die();
     }
 }

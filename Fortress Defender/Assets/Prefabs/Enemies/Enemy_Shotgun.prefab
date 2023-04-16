@@ -199,8 +199,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 7
   stopDistance: 12
+  health: 20
   isStopped: 0
+  isDied: 0
   animator: {fileID: 1383406320486531469}
+  myColliders:
+  - {fileID: 1383406320486531468}
   fortress: {fileID: 0}
 --- !u!136 &1383406320486531468
 CapsuleCollider:

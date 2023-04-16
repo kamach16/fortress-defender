@@ -5013,9 +5013,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 4
   stopDistance: 35
+  health: 40
   isStopped: 0
   isDied: 0
   animator: {fileID: 7468358208891606015}
+  myColliders:
+  - {fileID: 7468358208891606001}
   fortress: {fileID: 0}
 --- !u!1 &7441956386854134709
 GameObject:
