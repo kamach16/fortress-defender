@@ -13890,10 +13890,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy_Minigun
       objectReference: {fileID: 0}
-    - target: {fileID: 4297018278071534991, guid: 2ea445fd1da5c1348a07810fe95b24ee, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4297018278071966191, guid: 2ea445fd1da5c1348a07810fe95b24ee, type: 3}
       propertyPath: m_RootOrder
       value: 4
