@@ -6,12 +6,16 @@ using Random = UnityEngine.Random;
 
 public class EnemySpawner : MonoBehaviour
 {
+    [Header("About spawner")]
     [SerializeField] private List<GameObject> enemies = new List<GameObject>();
     [SerializeField] private Transform enemySpawnPoint;
     [SerializeField] private float minZPosSpawnOffset;
     [SerializeField] private float maxZPosSpawnOffset;
     [SerializeField] private float timeBetweenSpawns;
+
+    [Header("Others")]
     [SerializeField] private Transform fortress;
+    [SerializeField] private PlayerHealth playerHealth;
 
     private IEnumerator Start()
     {
@@ -25,7 +29,10 @@ public class EnemySpawner : MonoBehaviour
     private void SpawnEnemy()
     {
         GameObject spawnedEnemy = Instantiate(GetRandomEnemy(), enemySpawnPoint.position + new Vector3(0, 0, GetRandomZOffset()), Quaternion.Euler(0, 90, 0));
-        spawnedEnemy.GetComponent<EnemyController>().SetFortress(fortress);
+
+        EnemyController spawnedEnemyController = spawnedEnemy.GetComponent<EnemyController>();
+        spawnedEnemyController.SetFortress(fortress);
+        spawnedEnemyController.SetPlayerHealth(playerHealth);
     }
 
     private GameObject GetRandomEnemy()

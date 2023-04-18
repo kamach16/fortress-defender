@@ -90,3 +90,5 @@ MonoBehaviour:
   minZPosSpawnOffset: -8
   maxZPosSpawnOffset: 8
   timeBetweenSpawns: 2
+  fortress: {fileID: 0}
+  playerHealth: {fileID: 0}
