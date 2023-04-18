@@ -15,6 +15,7 @@ public class EnemyController : MonoBehaviour
 
     [Header("About shooting")]
     [SerializeField] private float damage;
+    [SerializeField] private ParticleSystem gunShotVFX;
 
     [Header("Others")]
     [SerializeField] private Animator animator;
@@ -65,6 +66,7 @@ public class EnemyController : MonoBehaviour
 
     public void DoDamage() // animation event
     {
+        gunShotVFX.Play();
         playerHealth.TakeDamage(damage);
     }
 

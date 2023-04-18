@@ -13061,7 +13061,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7441956386854134707, guid: e262d03dba307ed4ca308862592e3a4d, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7441956386854174611, guid: e262d03dba307ed4ca308862592e3a4d, type: 3}
       propertyPath: m_RootOrder
@@ -13172,10 +13172,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy_AK47
       objectReference: {fileID: 0}
-    - target: {fileID: 4047005752804845443, guid: 18d96825c4ee63f4cb3d1a82b70a8d80, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5416044132631227843, guid: 18d96825c4ee63f4cb3d1a82b70a8d80, type: 3}
       propertyPath: fortress
       value: 
@@ -13280,7 +13276,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6934229727552146747, guid: 829d4cfb2e38056448911efc5f371793, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -23.150002
+      value: -1.46
       objectReference: {fileID: 0}
     - target: {fileID: 6934229727552146747, guid: 829d4cfb2e38056448911efc5f371793, type: 3}
       propertyPath: m_LocalPosition.y
@@ -13321,10 +13317,6 @@ PrefabInstance:
     - target: {fileID: 6934229727552246107, guid: 829d4cfb2e38056448911efc5f371793, type: 3}
       propertyPath: m_Name
       value: Enemy_AssultRifle
-      objectReference: {fileID: 0}
-    - target: {fileID: 6934229727552246107, guid: 829d4cfb2e38056448911efc5f371793, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 829d4cfb2e38056448911efc5f371793, type: 3}

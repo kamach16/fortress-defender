@@ -170,6 +170,7 @@ MonoBehaviour:
   health: 20
   isDied: 0
   damage: 1
+  gunShotVFX: {fileID: 5864500766832131675}
   animator: {fileID: 4047005752797552713}
   myColliders:
   - {fileID: 5416044132631227844}
@@ -933,7 +934,8 @@ Transform:
   m_LocalPosition: {x: 0.483518, y: 0.007836611, z: 0.0011486795}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 5864500766850475911}
   m_Father: {fileID: 4241861991933348227}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2027,3 +2029,70 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1001 &3100118992060878868
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 4241861991933348225}
+    m_Modifications:
+    - target: {fileID: 8820073010336364435, guid: 266927ce03462624b90d56ef26e12054, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8820073010336364435, guid: 266927ce03462624b90d56ef26e12054, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.946
+      objectReference: {fileID: 0}
+    - target: {fileID: 8820073010336364435, guid: 266927ce03462624b90d56ef26e12054, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.179
+      objectReference: {fileID: 0}
+    - target: {fileID: 8820073010336364435, guid: 266927ce03462624b90d56ef26e12054, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.009
+      objectReference: {fileID: 0}
+    - target: {fileID: 8820073010336364435, guid: 266927ce03462624b90d56ef26e12054, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8820073010336364435, guid: 266927ce03462624b90d56ef26e12054, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8820073010336364435, guid: 266927ce03462624b90d56ef26e12054, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8820073010336364435, guid: 266927ce03462624b90d56ef26e12054, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8820073010336364435, guid: 266927ce03462624b90d56ef26e12054, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8820073010336364435, guid: 266927ce03462624b90d56ef26e12054, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8820073010336364435, guid: 266927ce03462624b90d56ef26e12054, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8820073010336556505, guid: 266927ce03462624b90d56ef26e12054, type: 3}
+      propertyPath: m_Name
+      value: AK47GunShotVFX
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 266927ce03462624b90d56ef26e12054, type: 3}
+--- !u!198 &5864500766832131675 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 8820073010354712143, guid: 266927ce03462624b90d56ef26e12054, type: 3}
+  m_PrefabInstance: {fileID: 3100118992060878868}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &5864500766850475911 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8820073010336364435, guid: 266927ce03462624b90d56ef26e12054, type: 3}
+  m_PrefabInstance: {fileID: 3100118992060878868}
+  m_PrefabAsset: {fileID: 0}
