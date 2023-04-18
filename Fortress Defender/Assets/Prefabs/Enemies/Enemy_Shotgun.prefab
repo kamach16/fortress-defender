@@ -199,13 +199,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 7
   stopDistance: 12
-  health: 20
   isStopped: 0
+  health: 20
   isDied: 0
+  damage: 1
   animator: {fileID: 1383406320486531469}
   myColliders:
   - {fileID: 1383406320486531468}
   fortress: {fileID: 0}
+  playerHealth: {fileID: 0}
 --- !u!136 &1383406320486531468
 CapsuleCollider:
   m_ObjectHideFlags: 0

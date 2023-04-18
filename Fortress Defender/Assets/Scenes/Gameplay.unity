@@ -13111,6 +13111,10 @@ PrefabInstance:
       propertyPath: fortress
       value: 
       objectReference: {fileID: 1028950144}
+    - target: {fileID: 7468358208891606014, guid: e262d03dba307ed4ca308862592e3a4d, type: 3}
+      propertyPath: playerHealth
+      value: 
+      objectReference: {fileID: 1028950145}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e262d03dba307ed4ca308862592e3a4d, type: 3}
 --- !u!1001 &195077417623995803
@@ -13170,12 +13174,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4047005752804845443, guid: 18d96825c4ee63f4cb3d1a82b70a8d80, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5416044132631227843, guid: 18d96825c4ee63f4cb3d1a82b70a8d80, type: 3}
       propertyPath: fortress
       value: 
       objectReference: {fileID: 1028950144}
+    - target: {fileID: 5416044132631227843, guid: 18d96825c4ee63f4cb3d1a82b70a8d80, type: 3}
+      propertyPath: playerHealth
+      value: 
+      objectReference: {fileID: 1028950145}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 18d96825c4ee63f4cb3d1a82b70a8d80, type: 3}
 --- !u!1001 &1812185288000313006
@@ -13262,6 +13270,10 @@ PrefabInstance:
       propertyPath: fortress
       value: 
       objectReference: {fileID: 1028950144}
+    - target: {fileID: 1385745331798612763, guid: 829d4cfb2e38056448911efc5f371793, type: 3}
+      propertyPath: playerHealth
+      value: 
+      objectReference: {fileID: 1028950145}
     - target: {fileID: 6934229727552146747, guid: 829d4cfb2e38056448911efc5f371793, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -13312,7 +13324,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6934229727552246107, guid: 829d4cfb2e38056448911efc5f371793, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 829d4cfb2e38056448911efc5f371793, type: 3}
@@ -13334,7 +13346,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1383406320479218665, guid: 12dbdbfc88bd7e940a9a56eb3033c43f, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1383406320479516553, guid: 12dbdbfc88bd7e940a9a56eb3033c43f, type: 3}
       propertyPath: m_RootOrder
@@ -13384,6 +13396,10 @@ PrefabInstance:
       propertyPath: fortress
       value: 
       objectReference: {fileID: 1028950144}
+    - target: {fileID: 1383406320486531471, guid: 12dbdbfc88bd7e940a9a56eb3033c43f, type: 3}
+      propertyPath: playerHealth
+      value: 
+      objectReference: {fileID: 1028950145}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 12dbdbfc88bd7e940a9a56eb3033c43f, type: 3}
 --- !u!1 &4122369968854752506
@@ -13505,6 +13521,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemySpawner
       objectReference: {fileID: 0}
+    - target: {fileID: 4864753785132998299, guid: bcdc1bc906f3bb94ea8a492e30fb2ed8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4864753785132998300, guid: bcdc1bc906f3bb94ea8a492e30fb2ed8, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -13616,12 +13636,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 906872586003886751, guid: 4e906b9542d938d4cb12bd1144c3472a, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 906872586013366521, guid: 4e906b9542d938d4cb12bd1144c3472a, type: 3}
       propertyPath: fortress
       value: 
       objectReference: {fileID: 1028950144}
+    - target: {fileID: 906872586013366521, guid: 4e906b9542d938d4cb12bd1144c3472a, type: 3}
+      propertyPath: playerHealth
+      value: 
+      objectReference: {fileID: 1028950145}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e906b9542d938d4cb12bd1144c3472a, type: 3}
 --- !u!4 &5702442509553053587 stripped
@@ -13647,7 +13671,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2802996213199906190, guid: 3b2b49389d5c21b4eab1a1191dceb865, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -13.09
+      value: -38.58
       objectReference: {fileID: 0}
     - target: {fileID: 2802996213199906190, guid: 3b2b49389d5c21b4eab1a1191dceb865, type: 3}
       propertyPath: m_LocalPosition.y
@@ -13691,16 +13715,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2802996213199944110, guid: 3b2b49389d5c21b4eab1a1191dceb865, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2802996213203330451, guid: 3b2b49389d5c21b4eab1a1191dceb865, type: 3}
       propertyPath: fortress
       value: 
       objectReference: {fileID: 1028950144}
     - target: {fileID: 2802996213203330451, guid: 3b2b49389d5c21b4eab1a1191dceb865, type: 3}
-      propertyPath: stopDistance
-      value: 22
-      objectReference: {fileID: 0}
+      propertyPath: playerHealth
+      value: 
+      objectReference: {fileID: 1028950145}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b2b49389d5c21b4eab1a1191dceb865, type: 3}
 --- !u!4 &7374342513266254293 stripped
@@ -13722,10 +13746,6 @@ PrefabInstance:
     - target: {fileID: 8049337472876036608, guid: de06f59af17582c44af210e0d576c1ec, type: 3}
       propertyPath: m_Name
       value: Fortress
-      objectReference: {fileID: 0}
-    - target: {fileID: 8049337472876036862, guid: de06f59af17582c44af210e0d576c1ec, type: 3}
-      propertyPath: health
-      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8049337472876036862, guid: de06f59af17582c44af210e0d576c1ec, type: 3}
       propertyPath: gameManager
@@ -13793,13 +13813,17 @@ PrefabInstance:
       propertyPath: fortress
       value: 
       objectReference: {fileID: 1028950144}
+    - target: {fileID: 920048667, guid: c21e19c388a28ea4daadac8adabbdaad, type: 3}
+      propertyPath: playerHealth
+      value: 
+      objectReference: {fileID: 1028950145}
     - target: {fileID: 8286761006858853979, guid: c21e19c388a28ea4daadac8adabbdaad, type: 3}
       propertyPath: m_Name
       value: Enemy_Handgun
       objectReference: {fileID: 0}
     - target: {fileID: 8286761006858853979, guid: c21e19c388a28ea4daadac8adabbdaad, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8286761006859207227, guid: c21e19c388a28ea4daadac8adabbdaad, type: 3}
       propertyPath: m_RootOrder
@@ -13859,16 +13883,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1028950144}
     - target: {fileID: 4297018278062092265, guid: 2ea445fd1da5c1348a07810fe95b24ee, type: 3}
-      propertyPath: moveSpeed
-      value: 5
-      objectReference: {fileID: 0}
+      propertyPath: playerHealth
+      value: 
+      objectReference: {fileID: 1028950145}
     - target: {fileID: 4297018278071534991, guid: 2ea445fd1da5c1348a07810fe95b24ee, type: 3}
       propertyPath: m_Name
       value: Enemy_Minigun
       objectReference: {fileID: 0}
     - target: {fileID: 4297018278071534991, guid: 2ea445fd1da5c1348a07810fe95b24ee, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4297018278071966191, guid: 2ea445fd1da5c1348a07810fe95b24ee, type: 3}
       propertyPath: m_RootOrder
@@ -13929,7 +13953,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7160806335990829747, guid: 8f19137424d751c4c8ea1bd0a1f53aa8, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7160806335991123667, guid: 8f19137424d751c4c8ea1bd0a1f53aa8, type: 3}
       propertyPath: m_RootOrder
@@ -13979,5 +14003,9 @@ PrefabInstance:
       propertyPath: fortress
       value: 
       objectReference: {fileID: 1028950144}
+    - target: {fileID: 7160806335998163157, guid: 8f19137424d751c4c8ea1bd0a1f53aa8, type: 3}
+      propertyPath: playerHealth
+      value: 
+      objectReference: {fileID: 1028950145}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f19137424d751c4c8ea1bd0a1f53aa8, type: 3}

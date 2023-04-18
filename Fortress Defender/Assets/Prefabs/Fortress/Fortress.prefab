@@ -288,8 +288,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3a91cbca2519024c9c6c5b20c218d20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
-  isDestroyed: 0
+  health: 100
+  gameManager: {fileID: 0}
 --- !u!1 &8049337473647980734
 GameObject:
   m_ObjectHideFlags: 0

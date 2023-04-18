@@ -1191,15 +1191,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d66338980f7822148a4fe1a289504465, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 4
+  moveSpeed: 5
   stopDistance: 14
-  health: 20
   isStopped: 0
+  health: 20
   isDied: 0
+  damage: 1
   animator: {fileID: 4297018278062092267}
   myColliders:
   - {fileID: 4297018278062092266}
   fortress: {fileID: 0}
+  playerHealth: {fileID: 0}
 --- !u!136 &4297018278062092266
 CapsuleCollider:
   m_ObjectHideFlags: 0

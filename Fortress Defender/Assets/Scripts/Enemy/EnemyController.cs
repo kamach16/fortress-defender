@@ -74,6 +74,7 @@ public class EnemyController : MonoBehaviour
         animator.SetTrigger("death");
         DisableColliders();
         isDied = true;
+        Destroy(gameObject, 2f);
     }
 
     private void DisableColliders()

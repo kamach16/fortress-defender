@@ -14,5 +14,6 @@ public class GameManager : MonoBehaviour
     public void LoseGame()
     {
         lost = true;
+        print("DEFEAT");
     }
 }

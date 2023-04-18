@@ -4905,7 +4905,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7441956386854134707}
-  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -43.91, y: -0.19479561, z: 3.15}
   m_LocalScale: {x: 1, y: 1, z: -1}
   m_ConstrainProportionsScale: 0
@@ -5013,13 +5013,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 4
   stopDistance: 35
-  health: 40
   isStopped: 0
+  health: 40
   isDied: 0
+  damage: 1
   animator: {fileID: 7468358208891606015}
   myColliders:
   - {fileID: 7468358208891606001}
   fortress: {fileID: 0}
+  playerHealth: {fileID: 0}
 --- !u!1 &7441956386854134709
 GameObject:
   m_ObjectHideFlags: 0
