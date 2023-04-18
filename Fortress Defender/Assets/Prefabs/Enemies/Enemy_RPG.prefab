@@ -1071,6 +1071,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8722909940285525663}
+  - {fileID: 8322682137611006625}
   m_Father: {fileID: 4902597816664536888}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1198,6 +1199,7 @@ MonoBehaviour:
   health: 20
   isDied: 0
   damage: 1
+  gunShotVFX: {fileID: 8322682137629354877}
   animator: {fileID: 7160806335998163159}
   myColliders:
   - {fileID: 7160806335998163158}
@@ -2111,3 +2113,70 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1001 &713586220756698418
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 4902597817689722259}
+    m_Modifications:
+    - target: {fileID: 8820073010336364435, guid: e66d05d09c326c64c9bf2456ef0617c5, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8820073010336364435, guid: e66d05d09c326c64c9bf2456ef0617c5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.554
+      objectReference: {fileID: 0}
+    - target: {fileID: 8820073010336364435, guid: e66d05d09c326c64c9bf2456ef0617c5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.272
+      objectReference: {fileID: 0}
+    - target: {fileID: 8820073010336364435, guid: e66d05d09c326c64c9bf2456ef0617c5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.015
+      objectReference: {fileID: 0}
+    - target: {fileID: 8820073010336364435, guid: e66d05d09c326c64c9bf2456ef0617c5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8820073010336364435, guid: e66d05d09c326c64c9bf2456ef0617c5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8820073010336364435, guid: e66d05d09c326c64c9bf2456ef0617c5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8820073010336364435, guid: e66d05d09c326c64c9bf2456ef0617c5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8820073010336364435, guid: e66d05d09c326c64c9bf2456ef0617c5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8820073010336364435, guid: e66d05d09c326c64c9bf2456ef0617c5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8820073010336364435, guid: e66d05d09c326c64c9bf2456ef0617c5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8820073010336556505, guid: e66d05d09c326c64c9bf2456ef0617c5, type: 3}
+      propertyPath: m_Name
+      value: RPGGunShotVFX
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e66d05d09c326c64c9bf2456ef0617c5, type: 3}
+--- !u!4 &8322682137611006625 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8820073010336364435, guid: e66d05d09c326c64c9bf2456ef0617c5, type: 3}
+  m_PrefabInstance: {fileID: 713586220756698418}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &8322682137629354877 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 8820073010354712143, guid: e66d05d09c326c64c9bf2456ef0617c5, type: 3}
+  m_PrefabInstance: {fileID: 713586220756698418}
+  m_PrefabAsset: {fileID: 0}
