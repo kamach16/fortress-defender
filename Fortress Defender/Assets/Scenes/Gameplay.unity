@@ -13069,7 +13069,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7441956386854174611, guid: e262d03dba307ed4ca308862592e3a4d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -43.91
+      value: -35.9
       objectReference: {fileID: 0}
     - target: {fileID: 7441956386854174611, guid: e262d03dba307ed4ca308862592e3a4d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -13077,7 +13077,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7441956386854174611, guid: e262d03dba307ed4ca308862592e3a4d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.15
+      value: 4.87
       objectReference: {fileID: 0}
     - target: {fileID: 7441956386854174611, guid: e262d03dba307ed4ca308862592e3a4d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -13950,6 +13950,10 @@ PrefabInstance:
     - target: {fileID: 7160806335990829747, guid: 8f19137424d751c4c8ea1bd0a1f53aa8, type: 3}
       propertyPath: m_Name
       value: Enemy_RPG
+      objectReference: {fileID: 0}
+    - target: {fileID: 7160806335990829747, guid: 8f19137424d751c4c8ea1bd0a1f53aa8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7160806335991123667, guid: 8f19137424d751c4c8ea1bd0a1f53aa8, type: 3}
       propertyPath: m_RootOrder
