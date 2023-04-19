@@ -144,6 +144,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 10
   mainCamera: {fileID: 0}
+  groundHitSplatVFX: {fileID: 2884736753201441436, guid: 4e68a81234eb8a3449b1ee604feddbfe, type: 3}
 --- !u!1 &8049337472871566238
 GameObject:
   m_ObjectHideFlags: 0

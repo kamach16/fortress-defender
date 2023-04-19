@@ -12,6 +12,7 @@ public class EnemyController : MonoBehaviour
     [Header("About health")]
     [SerializeField] private float health;
     [SerializeField] private bool isDied = false;
+    [SerializeField] private ParticleSystem playerWeaponHitSplatVFX;
 
     [Header("About shooting")]
     [SerializeField] private float damage;
@@ -51,7 +52,7 @@ public class EnemyController : MonoBehaviour
     {
         if (isStopped) return;
 
-        if(transform.position.x > fortress.position.x - stopDistance)
+        if (transform.position.x > fortress.position.x - stopDistance)
         {
             Shooting();
             isStopped = true;
@@ -91,10 +92,14 @@ public class EnemyController : MonoBehaviour
     {
         if (isDied) return;
 
-        print(gameObject.name + " took damage");
-
         health -= damage;
 
         if (health <= 0) Die();
+    }
+
+    public void ShowPlayerWeaponHitSplat(Vector3 newPlayerWeaponHitSplatVFXPos)
+    {
+        playerWeaponHitSplatVFX.transform.position = newPlayerWeaponHitSplatVFXPos;
+        playerWeaponHitSplatVFX.Play();
     }
 }

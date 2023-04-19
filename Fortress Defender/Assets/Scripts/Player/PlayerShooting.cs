@@ -6,6 +6,7 @@ public class PlayerShooting : MonoBehaviour
 {
     [SerializeField] private float damage = 10;
     [SerializeField] private Camera mainCamera;
+    [SerializeField] private GameObject groundHitSplatVFX;
 
     private void Update()
     {
@@ -23,9 +24,22 @@ public class PlayerShooting : MonoBehaviour
             {
                 EnemyController enemy = hit.transform.gameObject.GetComponent<EnemyController>();
 
-                if (enemy == null) return;
-                enemy.TakeDamage(damage);
+                if (enemy == null)
+                {
+                    CreateGroundHitSplatVFX(hit.point);
+                }
+                else
+                {
+                    enemy.TakeDamage(damage);
+                    enemy.ShowPlayerWeaponHitSplat(hit.point);
+                }
             }
         }
+    }
+
+    private void CreateGroundHitSplatVFX(Vector3 spawnPos)
+    {
+        GameObject vfx = Instantiate(groundHitSplatVFX, spawnPos, Quaternion.identity);
+        Destroy(vfx, 1f);
     }
 }
