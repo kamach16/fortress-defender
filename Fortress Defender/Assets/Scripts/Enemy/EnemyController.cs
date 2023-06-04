@@ -24,6 +24,8 @@ public class EnemyController : MonoBehaviour
     [SerializeField] private Transform fortress;
     [SerializeField] private PlayerHealth playerHealth;
 
+    private EnemySpawner enemySpawner;
+
     private void Update()
     {
         Move();
@@ -38,6 +40,11 @@ public class EnemyController : MonoBehaviour
     public void SetPlayerHealth(PlayerHealth playerHealth)
     {
         this.playerHealth = playerHealth;
+    }
+
+    public void SetEnemySpawner(EnemySpawner enemySpawner)
+    {
+        this.enemySpawner = enemySpawner;
     }
 
     // MOVEMENT SECTION
@@ -77,6 +84,7 @@ public class EnemyController : MonoBehaviour
         animator.SetTrigger("death");
         DisableColliders();
         isDied = true;
+        enemySpawner.DeleteEnemyFromCurrentEnemiesList(this);
         Destroy(gameObject, 2f);
     }
 

@@ -76,7 +76,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8fa0529eb8d09e4b8fd6856ceb5360e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemies:
+  enemyTypes:
   - {fileID: 4047005752804845443, guid: 18d96825c4ee63f4cb3d1a82b70a8d80, type: 3}
   - {fileID: 6934229727552246107, guid: 829d4cfb2e38056448911efc5f371793, type: 3}
   - {fileID: 8286761006858853979, guid: c21e19c388a28ea4daadac8adabbdaad, type: 3}
@@ -90,5 +90,7 @@ MonoBehaviour:
   minZPosSpawnOffset: -8
   maxZPosSpawnOffset: 8
   timeBetweenSpawns: 2
+  currentEnemies: []
   fortress: {fileID: 0}
   playerHealth: {fileID: 0}
+  gameManager: {fileID: 0}

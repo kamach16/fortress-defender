@@ -167,7 +167,7 @@ MonoBehaviour:
   moveSpeed: 6
   stopDistance: 30
   isStopped: 0
-  health: 20
+  health: 3
   isDied: 0
   playerWeaponHitSplatVFX: {fileID: 9026485428737869444}
   damage: 1
