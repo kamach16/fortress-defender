@@ -747,7 +747,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 592adb1dec78ef243813163045e1e495, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damagePerHit: 10
+  currentWeapon: {fileID: 0}
+  damagePerHit: 0
+  maxAmmo: 0
+  reloadTime: 0
+  isRifle: 0
   mainCamera: {fileID: 0}
   groundHitSplatVFX: {fileID: 2884736753201441436, guid: 4e68a81234eb8a3449b1ee604feddbfe, type: 3}
   gameManager: {fileID: 0}

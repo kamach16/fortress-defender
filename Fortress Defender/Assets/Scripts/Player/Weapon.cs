@@ -8,5 +8,5 @@ public class Weapon : ScriptableObject
     public float damagePerHit;
     public int maxAmmo;
     public float reloadTime;
-    public bool isRifle;
+    public bool fullAuto;
 }

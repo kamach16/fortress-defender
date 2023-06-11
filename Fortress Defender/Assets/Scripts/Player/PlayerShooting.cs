@@ -9,13 +9,22 @@ public class PlayerShooting : MonoBehaviour
     [SerializeField] private int maxAmmo;
     [SerializeField] private float reloadTime;
     [SerializeField] private bool isRifle;
+    [SerializeField] private int currentAmmo;
+
     [SerializeField] private Camera mainCamera;
     [SerializeField] private GameObject groundHitSplatVFX;
     [SerializeField] private GameManager gameManager;
+    [SerializeField] private AmmoDisplay ammoDisplay;
+
+    private void Start()
+    {
+        SelectWeapon(currentWeapon); // delete this when shop will be in building
+    }
 
     private void Update()
     {
         Shooting();
+        Reloading();
     }
 
     public void SelectWeapon(Weapon newWeapon)
@@ -25,7 +34,10 @@ public class PlayerShooting : MonoBehaviour
         damagePerHit = currentWeapon.damagePerHit;
         maxAmmo = currentWeapon.maxAmmo;
         reloadTime = currentWeapon.reloadTime;
-        isRifle = currentWeapon.isRifle;
+        isRifle = currentWeapon.fullAuto;
+
+        currentAmmo = maxAmmo;
+        ammoDisplay.UpdateAmmoText(currentAmmo, maxAmmo);
     }
 
     private void Shooting()
@@ -34,10 +46,15 @@ public class PlayerShooting : MonoBehaviour
 
         if(Input.GetMouseButtonDown(0))
         {
+            if (currentAmmo <= 0) return;
+
             Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
 
-            if(Physics.Raycast(ray, out hit))
+            currentAmmo--;
+            ammoDisplay.UpdateAmmoText(currentAmmo, maxAmmo);
+
+            if (Physics.Raycast(ray, out hit))
             {
                 EnemyController enemy = hit.transform.gameObject.GetComponent<EnemyController>();
 
@@ -51,6 +68,15 @@ public class PlayerShooting : MonoBehaviour
                     enemy.ShowPlayerWeaponHitSplat(hit.point);
                 }
             }
+        }
+    }
+
+    private void Reloading()
+    {
+        if (Input.GetMouseButtonDown(1))
+        {
+            currentAmmo = maxAmmo;
+            ammoDisplay.UpdateAmmoText(currentAmmo, maxAmmo);
         }
     }
 

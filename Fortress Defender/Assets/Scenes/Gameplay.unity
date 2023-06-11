@@ -660,6 +660,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 71796156}
   m_Mesh: {fileID: 4300022, guid: 344a3d604644509489c062f11bbe78a5, type: 3}
+--- !u!114 &108940383 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 108940383, guid: 7e76d889aeed46c4fa2057ebd096d818, type: 3}
+  m_PrefabInstance: {fileID: 8342558895068735441}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45a8c7f34750e7a4c82d318a3b52fc9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &109694288
 GameObject:
   m_ObjectHideFlags: 0
@@ -13283,14 +13294,26 @@ PrefabInstance:
       propertyPath: enemySpawner
       value: 
       objectReference: {fileID: 2050271016}
+    - target: {fileID: 1712820048, guid: de06f59af17582c44af210e0d576c1ec, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8049337472351394842, guid: de06f59af17582c44af210e0d576c1ec, type: 3}
       propertyPath: mainCamera
       value: 
       objectReference: {fileID: 963194227}
     - target: {fileID: 8049337472351394842, guid: de06f59af17582c44af210e0d576c1ec, type: 3}
+      propertyPath: ammoDisplay
+      value: 
+      objectReference: {fileID: 108940383}
+    - target: {fileID: 8049337472351394842, guid: de06f59af17582c44af210e0d576c1ec, type: 3}
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 1812185288000313007}
+    - target: {fileID: 8049337472351394842, guid: de06f59af17582c44af210e0d576c1ec, type: 3}
+      propertyPath: currentWeapon
+      value: 
+      objectReference: {fileID: 11400000, guid: 720b0095ac5b3ba4783064d3b9f62437, type: 2}
     - target: {fileID: 8049337472876036608, guid: de06f59af17582c44af210e0d576c1ec, type: 3}
       propertyPath: m_Name
       value: Fortress
@@ -13426,6 +13449,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1473091870, guid: 7e76d889aeed46c4fa2057ebd096d818, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1473091870, guid: 7e76d889aeed46c4fa2057ebd096d818, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8342558895374750022, guid: 7e76d889aeed46c4fa2057ebd096d818, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
