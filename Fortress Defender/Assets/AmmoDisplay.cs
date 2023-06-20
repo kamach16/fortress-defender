@@ -7,9 +7,13 @@ using TMPro;
 public class AmmoDisplay : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI ammoText;
+    [SerializeField] public Slider ammoSlider;
 
-    public void UpdateAmmoText(int currentAmmo, int maxAmmo)
+    public void UpdateAmmoDisplay(int currentAmmo, int maxAmmo)
     {
         ammoText.text = currentAmmo.ToString() + "/" + maxAmmo.ToString();
+
+        ammoSlider.maxValue = maxAmmo;
+        ammoSlider.value = currentAmmo;
     }
 }

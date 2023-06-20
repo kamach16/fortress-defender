@@ -10,6 +10,7 @@ public class PlayerShooting : MonoBehaviour
     [SerializeField] private float reloadTime;
     [SerializeField] private bool isRifle;
     [SerializeField] private int currentAmmo;
+    [SerializeField] private bool isReloading;
 
     [SerializeField] private Camera mainCamera;
     [SerializeField] private GameObject groundHitSplatVFX;
@@ -37,12 +38,12 @@ public class PlayerShooting : MonoBehaviour
         isRifle = currentWeapon.fullAuto;
 
         currentAmmo = maxAmmo;
-        ammoDisplay.UpdateAmmoText(currentAmmo, maxAmmo);
+        ammoDisplay.UpdateAmmoDisplay(currentAmmo, maxAmmo);
     }
 
     private void Shooting()
     {
-        if (gameManager.GetIfLost()) return;
+        if (gameManager.GetIfLost() || isReloading) return;
 
         if(Input.GetMouseButtonDown(0))
         {
@@ -52,7 +53,7 @@ public class PlayerShooting : MonoBehaviour
             RaycastHit hit;
 
             currentAmmo--;
-            ammoDisplay.UpdateAmmoText(currentAmmo, maxAmmo);
+            ammoDisplay.UpdateAmmoDisplay(currentAmmo, maxAmmo);
 
             if (Physics.Raycast(ray, out hit))
             {
@@ -73,10 +74,28 @@ public class PlayerShooting : MonoBehaviour
 
     private void Reloading()
     {
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButtonDown(1) && !isReloading)
         {
+            ammoDisplay.ammoSlider.value = 0;
+            ammoDisplay.ammoSlider.maxValue = 1;
+
+            isReloading = true;
+        }
+
+        if (isReloading) ReloadAnimation();
+    }
+
+    public void ReloadAnimation()
+    {
+        ammoDisplay.ammoSlider.value += Time.deltaTime / reloadTime;
+
+        if(ammoDisplay.ammoSlider.value >= ammoDisplay.ammoSlider.maxValue)
+        {
+            isReloading = false;
+            ammoDisplay.ammoSlider.maxValue = maxAmmo;
+            ammoDisplay.ammoSlider.value = maxAmmo;
             currentAmmo = maxAmmo;
-            ammoDisplay.UpdateAmmoText(currentAmmo, maxAmmo);
+            ammoDisplay.UpdateAmmoDisplay(currentAmmo, maxAmmo);
         }
     }
 

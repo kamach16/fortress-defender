@@ -13294,10 +13294,6 @@ PrefabInstance:
       propertyPath: enemySpawner
       value: 
       objectReference: {fileID: 2050271016}
-    - target: {fileID: 1712820048, guid: de06f59af17582c44af210e0d576c1ec, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8049337472351394842, guid: de06f59af17582c44af210e0d576c1ec, type: 3}
       propertyPath: mainCamera
       value: 
@@ -13310,10 +13306,6 @@ PrefabInstance:
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 1812185288000313007}
-    - target: {fileID: 8049337472351394842, guid: de06f59af17582c44af210e0d576c1ec, type: 3}
-      propertyPath: currentWeapon
-      value: 
-      objectReference: {fileID: 11400000, guid: 720b0095ac5b3ba4783064d3b9f62437, type: 2}
     - target: {fileID: 8049337472876036608, guid: de06f59af17582c44af210e0d576c1ec, type: 3}
       propertyPath: m_Name
       value: Fortress
@@ -13449,6 +13441,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 108940383, guid: 7e76d889aeed46c4fa2057ebd096d818, type: 3}
+      propertyPath: reloadTime
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1473091870, guid: 7e76d889aeed46c4fa2057ebd096d818, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
