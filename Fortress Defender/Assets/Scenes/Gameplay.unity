@@ -13136,6 +13136,14 @@ PrefabInstance:
       propertyPath: playerHealth
       value: 
       objectReference: {fileID: 1028950145}
+    - target: {fileID: 4864753785132998301, guid: bcdc1bc906f3bb94ea8a492e30fb2ed8, type: 3}
+      propertyPath: enemyTypes.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4864753785132998301, guid: bcdc1bc906f3bb94ea8a492e30fb2ed8, type: 3}
+      propertyPath: enemyTypes.Array.data[1]
+      value: 
+      objectReference: {fileID: 7441956386854134707, guid: e262d03dba307ed4ca308862592e3a4d, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bcdc1bc906f3bb94ea8a492e30fb2ed8, type: 3}
 --- !u!1001 &4879367553261338988
@@ -13306,9 +13314,17 @@ PrefabInstance:
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 1812185288000313007}
+    - target: {fileID: 8049337472351394842, guid: de06f59af17582c44af210e0d576c1ec, type: 3}
+      propertyPath: currentWeapon
+      value: 
+      objectReference: {fileID: 11400000, guid: 8cb8032be7f119e418b2559d6302a852, type: 2}
     - target: {fileID: 8049337472876036608, guid: de06f59af17582c44af210e0d576c1ec, type: 3}
       propertyPath: m_Name
       value: Fortress
+      objectReference: {fileID: 0}
+    - target: {fileID: 8049337472876036862, guid: de06f59af17582c44af210e0d576c1ec, type: 3}
+      propertyPath: health
+      value: 1e+12
       objectReference: {fileID: 0}
     - target: {fileID: 8049337472876036862, guid: de06f59af17582c44af210e0d576c1ec, type: 3}
       propertyPath: gameManager

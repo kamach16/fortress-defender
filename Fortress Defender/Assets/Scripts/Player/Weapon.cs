@@ -9,4 +9,5 @@ public class Weapon : ScriptableObject
     public int maxAmmo;
     public float reloadTime;
     public bool fullAuto;
+    public float timeBetweenBulletsIfFullAuto;
 }

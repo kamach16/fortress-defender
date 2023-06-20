@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Sniper
   m_EditorClassIdentifier: 
   damagePerHit: 5
-  maxAmmo: 10
-  reloadTime: 5
-  isRifle: 0
+  maxAmmo: 15
+  reloadTime: 4
+  fullAuto: 0
+  timeBetweenBulletsIfFullAuto: 0
