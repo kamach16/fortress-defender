@@ -12,12 +12,15 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private float minZPosSpawnOffset;
     [SerializeField] private float maxZPosSpawnOffset;
     [SerializeField] private float timeBetweenSpawns;
-    [SerializeField] private List<EnemyController> currentEnemies = new List<EnemyController>();
+    [SerializeField] public List<EnemyController> currentEnemies = new List<EnemyController>();
+    [SerializeField] private int killedEnemies;
+    [SerializeField] private int spawnedEnemies;
+    [SerializeField] private int enemiesAmountToSpawnPerLevel;
 
     [Header("Others")]
     [SerializeField] private Transform fortress;
     [SerializeField] private PlayerHealth playerHealth;
-    [SerializeField] private GameManager gameManager; 
+    [SerializeField] private GameManager gameManager;
 
     private IEnumerator Start()
     {
@@ -28,14 +31,9 @@ public class EnemySpawner : MonoBehaviour
         }
     }
 
-    public List<EnemyController> GetCurrentEnemiesList()
-    {
-        return currentEnemies;
-    }
-
     private void SpawnEnemy()
     {
-        if (gameManager.GetIfLost()) return;
+        if (gameManager.lost || spawnedEnemies >= enemiesAmountToSpawnPerLevel) return;
 
         GameObject spawnedEnemy = Instantiate(GetRandomEnemy(), enemySpawnPoint.position + new Vector3(0, 0, GetRandomZOffset()), Quaternion.Euler(0, 90, 0));
 
@@ -44,6 +42,8 @@ public class EnemySpawner : MonoBehaviour
         spawnedEnemyController.SetPlayerHealth(playerHealth);
         spawnedEnemyController.SetEnemySpawner(this);
         AddEnemyToCurrentEnemiesList(spawnedEnemyController);
+
+        spawnedEnemies++;
     }
 
     private void AddEnemyToCurrentEnemiesList(EnemyController enemyToAdd)
@@ -51,8 +51,9 @@ public class EnemySpawner : MonoBehaviour
         currentEnemies.Add(enemyToAdd);
     }
 
-    public void DeleteEnemyFromCurrentEnemiesList(EnemyController enemyToDelete)
+    public void OnEnemyKill(EnemyController enemyToDelete)
     {
+        killedEnemies++;
         currentEnemies.Remove(enemyToDelete);
     }
 

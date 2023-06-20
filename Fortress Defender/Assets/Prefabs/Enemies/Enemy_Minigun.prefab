@@ -1030,7 +1030,7 @@ MonoBehaviour:
   isStopped: 0
   health: 3
   isDied: 0
-  playerWeaponHitSplatVFX: {fileID: 2089095689412445060}
+  hitSplatVFX: {fileID: 2089095689412445060}
   damage: 1
   gunShotVFX: {fileID: 3290109381126942491}
   animator: {fileID: 4297018278062092267}

@@ -48,7 +48,7 @@ public class PlayerShooting : MonoBehaviour
 
     private void Shooting()
     {
-        if (gameManager.GetIfLost() || isReloading) return;
+        if (gameManager.lost || isReloading) return;
 
         if (Input.GetButtonDown("Fire1"))
         {
@@ -99,8 +99,8 @@ public class PlayerShooting : MonoBehaviour
             }
             else
             {
-                enemy.TakeDamage(damagePerHit);
-                enemy.ShowPlayerWeaponHitSplat(hit.point);
+                enemy.TakeDamage(damagePerHit, hit.point);
+                //enemy.ShowEnemyHitSplat(hit.point);
             }
         }
     }

@@ -15,11 +15,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public bool GetIfLost()
-    {
-        return lost;
-    }
-
     public void LoseGame()
     {
         lost = true;

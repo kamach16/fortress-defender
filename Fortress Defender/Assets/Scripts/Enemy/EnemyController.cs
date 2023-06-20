@@ -12,7 +12,7 @@ public class EnemyController : MonoBehaviour
     [Header("About health")]
     [SerializeField] private float health;
     [SerializeField] private bool isDied = false;
-    [SerializeField] private ParticleSystem playerWeaponHitSplatVFX;
+    [SerializeField] private ParticleSystem hitSplatVFX;
 
     [Header("About shooting")]
     [SerializeField] private float damage;
@@ -84,7 +84,7 @@ public class EnemyController : MonoBehaviour
         animator.SetTrigger("death");
         DisableColliders();
         isDied = true;
-        enemySpawner.DeleteEnemyFromCurrentEnemiesList(this);
+        enemySpawner.OnEnemyKill(this);
         Destroy(gameObject, 2f);
     }
 
@@ -96,18 +96,19 @@ public class EnemyController : MonoBehaviour
         }
     }
 
-    public void TakeDamage(float damage)
+    public void TakeDamage(float damage, Vector3 newhitSplatVFXPos)
     {
         if (isDied) return;
 
         health -= damage;
+        ShowEnemyHitSplat(newhitSplatVFXPos);
 
         if (health <= 0) Die();
     }
 
-    public void ShowPlayerWeaponHitSplat(Vector3 newPlayerWeaponHitSplatVFXPos)
+    public void ShowEnemyHitSplat(Vector3 newhitSplatVFXPos)
     {
-        playerWeaponHitSplatVFX.transform.position = newPlayerWeaponHitSplatVFXPos;
-        playerWeaponHitSplatVFX.Play();
+        hitSplatVFX.transform.position = newhitSplatVFXPos;
+        hitSplatVFX.Play();
     }
 }
