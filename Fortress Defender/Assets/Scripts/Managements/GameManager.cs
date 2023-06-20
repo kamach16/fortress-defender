@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] public bool lost = false;
+    [SerializeField] private int currentMoney;
+    [SerializeField] private MoneyDisplay moneyDisplay;
 
     private void Update()
     {
@@ -19,5 +21,17 @@ public class GameManager : MonoBehaviour
     {
         lost = true;
         Debug.Log("You lost the game");
+    }
+
+    public void AddMoney(int moneyToAdd)
+    {
+        currentMoney += moneyToAdd;
+        moneyDisplay.UpdateMoneyText(currentMoney);
+    }
+
+    public void SubtractMoney(int moneyToSubtract)
+    {
+        currentMoney -= moneyToSubtract;
+        moneyDisplay.UpdateMoneyText(currentMoney);
     }
 }

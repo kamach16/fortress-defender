@@ -35,12 +35,13 @@ public class EnemySpawner : MonoBehaviour
     {
         if (gameManager.lost || spawnedEnemies >= enemiesAmountToSpawnPerLevel) return;
 
-        GameObject spawnedEnemy = Instantiate(GetRandomEnemy(), enemySpawnPoint.position + new Vector3(0, 0, GetRandomZOffset()), Quaternion.Euler(0, 90, 0));
+        GameObject spawnedEnemy = Instantiate(GetRandomEnemyType(), enemySpawnPoint.position + new Vector3(0, 0, GetRandomZOffset()), Quaternion.Euler(0, 90, 0));
 
         EnemyController spawnedEnemyController = spawnedEnemy.GetComponent<EnemyController>();
         spawnedEnemyController.SetFortress(fortress);
         spawnedEnemyController.SetPlayerHealth(playerHealth);
         spawnedEnemyController.SetEnemySpawner(this);
+        spawnedEnemyController.SetGameManager(gameManager);
         AddEnemyToCurrentEnemiesList(spawnedEnemyController);
 
         spawnedEnemies++;
@@ -51,13 +52,13 @@ public class EnemySpawner : MonoBehaviour
         currentEnemies.Add(enemyToAdd);
     }
 
-    public void OnEnemyKill(EnemyController enemyToDelete)
+    public void DeleteEnemy(EnemyController enemyToDelete)
     {
         killedEnemies++;
         currentEnemies.Remove(enemyToDelete);
     }
 
-    private GameObject GetRandomEnemy()
+    private GameObject GetRandomEnemyType()
     {
         return enemyTypes[Random.Range(0, enemyTypes.Count)];
     }

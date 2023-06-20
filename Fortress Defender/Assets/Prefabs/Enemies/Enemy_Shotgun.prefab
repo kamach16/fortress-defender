@@ -203,6 +203,7 @@ MonoBehaviour:
   isStopped: 0
   health: 3
   isDied: 0
+  moneyToAdd: 100
   hitSplatVFX: {fileID: 3013581403188799115}
   damage: 1
   gunShotVFX: {fileID: 4356886693095084702}
@@ -211,6 +212,7 @@ MonoBehaviour:
   - {fileID: 1383406320486531468}
   fortress: {fileID: 0}
   playerHealth: {fileID: 0}
+  gameManager: {fileID: 0}
 --- !u!136 &1383406320486531468
 CapsuleCollider:
   m_ObjectHideFlags: 0

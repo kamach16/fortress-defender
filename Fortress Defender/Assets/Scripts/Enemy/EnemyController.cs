@@ -12,6 +12,7 @@ public class EnemyController : MonoBehaviour
     [Header("About health")]
     [SerializeField] private float health;
     [SerializeField] private bool isDied = false;
+    [SerializeField] private int moneyToAdd;
     [SerializeField] private ParticleSystem hitSplatVFX;
 
     [Header("About shooting")]
@@ -23,6 +24,7 @@ public class EnemyController : MonoBehaviour
     [SerializeField] private Collider[] myColliders;
     [SerializeField] private Transform fortress;
     [SerializeField] private PlayerHealth playerHealth;
+    [SerializeField] private GameManager gameManager;
 
     private EnemySpawner enemySpawner;
 
@@ -45,6 +47,11 @@ public class EnemyController : MonoBehaviour
     public void SetEnemySpawner(EnemySpawner enemySpawner)
     {
         this.enemySpawner = enemySpawner;
+    }
+
+    public void SetGameManager(GameManager gameManager)
+    {
+        this.gameManager = gameManager;
     }
 
     // MOVEMENT SECTION
@@ -84,7 +91,8 @@ public class EnemyController : MonoBehaviour
         animator.SetTrigger("death");
         DisableColliders();
         isDied = true;
-        enemySpawner.OnEnemyKill(this);
+        enemySpawner.DeleteEnemy(this);
+        gameManager.AddMoney(moneyToAdd);
         Destroy(gameObject, 2f);
     }
 
