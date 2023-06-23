@@ -34,13 +34,19 @@ public class MissileLauncherDefenceObject : MonoBehaviour
         {
             EnemyController targetedEnemy = enemySpawner.currentEnemies[randomEnemyIndex];
 
-            Quaternion targetRotation = Quaternion.LookRotation(turretModel.position - targetedEnemy.transform.position);
+            Quaternion targetRotation = Quaternion.LookRotation(turretModel.position - (targetedEnemy.transform.position + new Vector3(0, 1.5f, 0)));
             turretModel.rotation = Quaternion.Slerp(turretModel.rotation, targetRotation, rotationSpeed * Time.deltaTime);
         }
     }
 
     private void LaunchMissile()
     {
-        GameObject missile = Instantiate(missilePrefab, missileSpawnPositon.position, Quaternion.identity);
+        randomEnemyIndex = Random.Range(0, enemySpawner.currentEnemies.Count);
+
+        if (enemySpawner.currentEnemies.Count != 0)
+        {
+            GameObject missile = Instantiate(missilePrefab, missileSpawnPositon.position, missileSpawnPositon.rotation);
+            launchMissileVFX.Play();
+        }
     }
 }

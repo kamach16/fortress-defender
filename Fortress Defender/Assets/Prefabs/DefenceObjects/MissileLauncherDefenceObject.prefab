@@ -166,6 +166,37 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &6991950635825098975
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6141630425596212677}
+  m_Layer: 0
+  m_Name: MissileSpawnPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6141630425596212677
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6991950635825098975}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8779379401772066953}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &7057405351761855000
 GameObject:
   m_ObjectHideFlags: 0
@@ -215,8 +246,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemySpawner: {fileID: 0}
   timeBetweenShoots: 1
-  damagePerHit: 0
   rotationSpeed: 25
+  missilePrefab: {fileID: 245095986909110206, guid: 2c8b878ac27300c419a2e607ac526748, type: 3}
+  missileSpawnPositon: {fileID: 6141630425596212677}
   turretModel: {fileID: 8779379401772066953}
   launchMissileVFX: {fileID: 5793541742295078202}
 --- !u!1 &7057405351892021778
@@ -502,6 +534,7 @@ Transform:
   - {fileID: 7057405352293352185}
   - {fileID: 7057405351892021782}
   - {fileID: 7057405352526870834}
+  - {fileID: 6141630425596212677}
   m_Father: {fileID: 7057405351761855003}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
