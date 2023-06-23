@@ -91,7 +91,7 @@ public class PlayerShooting : MonoBehaviour
         {
             Debug.Log("One bullet fired");
 
-            EnemyController enemy = hit.transform.gameObject.GetComponent<EnemyController>();
+            EnemyController enemy = hit.transform.root.gameObject.GetComponent<EnemyController>();
 
             if (enemy == null)
             {
@@ -100,7 +100,7 @@ public class PlayerShooting : MonoBehaviour
             else
             {
                 enemy.TakeDamage(damagePerHit, hit.point);
-                //enemy.ShowEnemyHitSplat(hit.point);
+                enemy.ShowEnemyHitSplat(hit.point);
             }
         }
     }

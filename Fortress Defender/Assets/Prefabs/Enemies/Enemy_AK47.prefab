@@ -108,7 +108,7 @@ GameObject:
   - component: {fileID: 4047005752797552713}
   - component: {fileID: 5416044132631227843}
   - component: {fileID: 5416044132631227844}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Enemy_AK47
   m_TagString: Untagged
   m_Icon: {fileID: 0}
