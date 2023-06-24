@@ -13151,6 +13151,14 @@ PrefabInstance:
       propertyPath: playerHealth
       value: 
       objectReference: {fileID: 1028950145}
+    - target: {fileID: 4864753785132998301, guid: bcdc1bc906f3bb94ea8a492e30fb2ed8, type: 3}
+      propertyPath: timeBetweenSpawns
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4864753785132998301, guid: bcdc1bc906f3bb94ea8a492e30fb2ed8, type: 3}
+      propertyPath: enemiesAmountToSpawnPerLevel
+      value: 1000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bcdc1bc906f3bb94ea8a492e30fb2ed8, type: 3}
 --- !u!1001 &4879367553261338988
@@ -13313,42 +13321,10 @@ PrefabInstance:
       propertyPath: enemySpawner
       value: 
       objectReference: {fileID: 2050271016}
-    - target: {fileID: 370417372910885600, guid: de06f59af17582c44af210e0d576c1ec, type: 3}
-      propertyPath: timeBetweenShoots
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 3662316028404153947, guid: de06f59af17582c44af210e0d576c1ec, type: 3}
       propertyPath: enemySpawner
       value: 
       objectReference: {fileID: 2050271016}
-    - target: {fileID: 6593121812344575595, guid: de06f59af17582c44af210e0d576c1ec, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6593121812344575595, guid: de06f59af17582c44af210e0d576c1ec, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6593121812344575595, guid: de06f59af17582c44af210e0d576c1ec, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6593121812344575595, guid: de06f59af17582c44af210e0d576c1ec, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6593121812344575595, guid: de06f59af17582c44af210e0d576c1ec, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6593121812344575595, guid: de06f59af17582c44af210e0d576c1ec, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6593121812344575595, guid: de06f59af17582c44af210e0d576c1ec, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
-      objectReference: {fileID: 0}
     - target: {fileID: 8049337472351394842, guid: de06f59af17582c44af210e0d576c1ec, type: 3}
       propertyPath: mainCamera
       value: 
@@ -13361,10 +13337,6 @@ PrefabInstance:
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 1812185288000313007}
-    - target: {fileID: 8049337472699457974, guid: de06f59af17582c44af210e0d576c1ec, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8049337472876036608, guid: de06f59af17582c44af210e0d576c1ec, type: 3}
       propertyPath: m_Name
       value: Fortress
@@ -13420,14 +13392,6 @@ PrefabInstance:
     - target: {fileID: 8049337472876036863, guid: de06f59af17582c44af210e0d576c1ec, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8465502706767265342, guid: de06f59af17582c44af210e0d576c1ec, type: 3}
-      propertyPath: enemySpawner
-      value: 
-      objectReference: {fileID: 2050271016}
-    - target: {fileID: 8465502706767265342, guid: de06f59af17582c44af210e0d576c1ec, type: 3}
-      propertyPath: timeBetweenShoots
-      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de06f59af17582c44af210e0d576c1ec, type: 3}

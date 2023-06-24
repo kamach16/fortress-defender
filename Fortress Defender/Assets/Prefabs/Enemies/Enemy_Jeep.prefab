@@ -604,7 +604,7 @@ MonoBehaviour:
   moveSpeed: 10
   stopDistance: 22
   isStopped: 0
-  health: 3
+  health: 5
   isDied: 0
   moneyToAdd: 100
   hitSplatVFX: {fileID: 8953971786921640991}

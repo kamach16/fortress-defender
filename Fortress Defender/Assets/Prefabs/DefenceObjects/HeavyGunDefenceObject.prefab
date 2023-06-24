@@ -182,7 +182,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemySpawner: {fileID: 0}
-  timeBetweenShoots: 0.15
+  minTimeBetweenShoots: 0.15
+  maxTimeBetweenShoots: 0.3
   damagePerHit: 0.1
   rotationSpeed: 25
   gunShotVFX: {fileID: 6088091866245676160}

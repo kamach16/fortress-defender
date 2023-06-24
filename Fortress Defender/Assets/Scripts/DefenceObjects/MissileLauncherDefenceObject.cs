@@ -5,7 +5,8 @@ using UnityEngine;
 public class MissileLauncherDefenceObject : MonoBehaviour
 {
     [SerializeField] private EnemySpawner enemySpawner;
-    [SerializeField] private float timeBetweenShoots;
+    [SerializeField] private float minTimeBetweenShoots;
+    [SerializeField] private float maxTimeBetweenShoots;
     [SerializeField] private float rotationSpeed;
     [SerializeField] private GameObject missilePrefab;
     [SerializeField] private Transform missileSpawnPositon;
@@ -19,6 +20,8 @@ public class MissileLauncherDefenceObject : MonoBehaviour
         while (true)
         {
             LaunchMissile();
+
+            float timeBetweenShoots = Random.Range(minTimeBetweenShoots, maxTimeBetweenShoots);
             yield return new WaitForSeconds(timeBetweenShoots);
         }
     }

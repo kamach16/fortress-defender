@@ -245,7 +245,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemySpawner: {fileID: 0}
-  timeBetweenShoots: 1
+  minTimeBetweenShoots: 2
+  maxTimeBetweenShoots: 2.5
   rotationSpeed: 25
   missilePrefab: {fileID: 245095986909110206, guid: 2c8b878ac27300c419a2e607ac526748, type: 3}
   missileSpawnPositon: {fileID: 6141630425596212677}

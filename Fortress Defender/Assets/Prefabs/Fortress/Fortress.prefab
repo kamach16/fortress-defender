@@ -179,7 +179,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemySpawner: {fileID: 0}
-  timeBetweenShoots: 1
+  minTimeBetweenShoots: 1
+  maxTimeBetweenShoots: 1.5
   damagePerHit: 1
 --- !u!1 &996346969
 GameObject:
@@ -907,7 +908,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3a91cbca2519024c9c6c5b20c218d20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1231231
+  health: 1000
   gunmen: {fileID: 1712820048}
   gameManager: {fileID: 0}
   playerHealthDisplay: {fileID: 0}
@@ -1001,7 +1002,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8322047556177581262, guid: 200d9da512963044da03dc2a1e2030f1, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 200d9da512963044da03dc2a1e2030f1, type: 3}
@@ -1064,6 +1065,10 @@ PrefabInstance:
     - target: {fileID: 7057405351761855003, guid: d91b821e2d2877d4686a4b764edea836, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8880971824896236944, guid: d91b821e2d2877d4686a4b764edea836, type: 3}
+      propertyPath: timeBetweenShoots
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d91b821e2d2877d4686a4b764edea836, type: 3}

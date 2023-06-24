@@ -5,7 +5,8 @@ using UnityEngine;
 public class Gunman : MonoBehaviour
 {
     [SerializeField] private EnemySpawner enemySpawner;
-    [SerializeField] private float timeBetweenShoots;
+    [SerializeField] private float minTimeBetweenShoots;
+    [SerializeField] private float maxTimeBetweenShoots;
     [SerializeField] private float damagePerHit;
     
     private IEnumerator Start()
@@ -13,6 +14,8 @@ public class Gunman : MonoBehaviour
         while(true)
         {
             DealDamage();
+
+            float timeBetweenShoots = Random.Range(minTimeBetweenShoots, maxTimeBetweenShoots);
             yield return new WaitForSeconds(timeBetweenShoots);
         }
     }

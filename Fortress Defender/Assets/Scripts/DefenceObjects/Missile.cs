@@ -10,6 +10,7 @@ public class Missile : MonoBehaviour
     [SerializeField] private float moveSpeed;
     [SerializeField] private LayerMask enemyLayer;
     [SerializeField] private ParticleSystem explosionVFX;
+    [SerializeField] private GameObject model;
 
     private void Update()
     {
@@ -41,8 +42,8 @@ public class Missile : MonoBehaviour
             enemy.TakeDamage(damage, enemy.transform.position + new Vector3(0, 1.5f, 0));
         }
 
-        //explosionVFX.Play();
-        gameObject.SetActive(false);
+        explosionVFX.Play();
+        model.SetActive(false);
         Destroy(gameObject, 3);
     }
 
