@@ -8,6 +8,11 @@ public class GameManager : MonoBehaviour
     [SerializeField] public bool lost = false;
     [SerializeField] private int currentMoney;
     [SerializeField] private MoneyDisplay moneyDisplay;
+    [SerializeField] private GameObject shopScreen;
+
+    public delegate void Action();
+    public static event Action OnLevelWin;
+    public static event Action OnNewLevelStarted;
 
     private void Update()
     {
@@ -15,6 +20,20 @@ public class GameManager : MonoBehaviour
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
+    }
+
+    public void WinLevel()
+    {
+        shopScreen.SetActive(true);
+
+        if (OnLevelWin != null) OnLevelWin();
+    }
+
+    public void ContinueGame()
+    {
+        shopScreen.SetActive(false);
+
+        if (OnNewLevelStarted != null) OnNewLevelStarted();
     }
 
     public void LoseGame()

@@ -12,6 +12,7 @@ public class PlayerShooting : MonoBehaviour
     [SerializeField] private int currentAmmo;
     [SerializeField] private bool isReloading;
     [SerializeField] private float timeBetweenBulletsIfFullAuto;
+    [SerializeField] private bool isActive;
 
     [SerializeField] private Camera mainCamera;
     [SerializeField] private GameObject groundHitSplatVFX;
@@ -25,10 +26,33 @@ public class PlayerShooting : MonoBehaviour
         SelectWeapon(currentWeapon); // delete this when shop will be in building
     }
 
+    private void OnEnable()
+    {
+        GameManager.OnLevelWin += DeactiveWeapon;
+        GameManager.OnNewLevelStarted += ActiveWeapon;
+    }
+
+    private void OnDisable()
+    {
+        GameManager.OnLevelWin -= DeactiveWeapon;
+        GameManager.OnNewLevelStarted -= ActiveWeapon;
+    }
+
     private void Update()
     {
         Shooting();
         Reloading();
+    }
+
+    private void DeactiveWeapon()
+    {
+        isActive = false;
+        StopShooting();
+    }
+
+    private void ActiveWeapon()
+    {
+        isActive = true;
     }
 
     public void SelectWeapon(Weapon newWeapon)
@@ -48,7 +72,7 @@ public class PlayerShooting : MonoBehaviour
 
     private void Shooting()
     {
-        if (gameManager.lost || isReloading) return;
+        if (gameManager.lost || isReloading || !isActive) return;
 
         if (Input.GetButtonDown("Fire1"))
         {
