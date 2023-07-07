@@ -8,7 +8,12 @@ public class Gunman : MonoBehaviour
     [SerializeField] private float minTimeBetweenShoots;
     [SerializeField] private float maxTimeBetweenShoots;
     [SerializeField] private float damagePerHit;
-    
+
+    private void Awake()
+    {
+        enemySpawner = FindObjectOfType<EnemySpawner>();
+    }
+
     private IEnumerator Start()
     {
         while(true)

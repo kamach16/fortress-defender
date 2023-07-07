@@ -22,6 +22,16 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private PlayerHealth playerHealth;
     [SerializeField] private GameManager gameManager;
 
+    private void OnEnable()
+    {
+        GameManager.OnNewLevelStarted += RestartSpawner;
+    }
+
+    private void OnDisable()
+    {
+        GameManager.OnNewLevelStarted -= RestartSpawner;
+    }
+
     private IEnumerator Start()
     {
         while (true)
@@ -58,6 +68,12 @@ public class EnemySpawner : MonoBehaviour
         currentEnemies.Remove(enemyToDelete);
 
         if (killedEnemies >= enemiesAmountToSpawnPerLevel) gameManager.Invoke("WinLevel", 2f);
+    }
+
+    private void RestartSpawner()
+    {
+        killedEnemies = 0;
+        spawnedEnemies = 0;
     }
 
     private GameObject GetRandomEnemyType()
