@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] public bool lost = false;
-    [SerializeField] private int currentMoney;
+    [SerializeField] public int currentMoney;
     [SerializeField] private MoneyDisplay moneyDisplay;
     [SerializeField] private GameObject shopScreen;
 

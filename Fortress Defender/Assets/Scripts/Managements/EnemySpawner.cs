@@ -57,7 +57,7 @@ public class EnemySpawner : MonoBehaviour
         killedEnemies++;
         currentEnemies.Remove(enemyToDelete);
 
-        if (killedEnemies >= enemiesAmountToSpawnPerLevel) gameManager.WinLevel();
+        if (killedEnemies >= enemiesAmountToSpawnPerLevel) gameManager.Invoke("WinLevel", 2f);
     }
 
     private GameObject GetRandomEnemyType()

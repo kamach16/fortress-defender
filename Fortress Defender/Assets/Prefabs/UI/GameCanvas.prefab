@@ -151,7 +151,7 @@ GameObject:
   - component: {fileID: 59061005}
   - component: {fileID: 59061004}
   m_Layer: 5
-  m_Name: Prize
+  m_Name: StateText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -362,8 +362,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -117.73607}
-  m_SizeDelta: {x: 157.24, y: 88.6265}
+  m_AnchoredPosition: {x: 0, y: -96.733154}
+  m_SizeDelta: {x: 157.24, y: 46.6206}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &248965764
 CanvasRenderer:
@@ -497,8 +497,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -117.73607}
-  m_SizeDelta: {x: 157.24, y: 88.6265}
+  m_AnchoredPosition: {x: 0, y: -96.733154}
+  m_SizeDelta: {x: 157.24, y: 46.6206}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &341853414
 CanvasRenderer:
@@ -609,7 +609,7 @@ GameObject:
   - component: {fileID: 404836222}
   - component: {fileID: 404836221}
   m_Layer: 5
-  m_Name: Prize
+  m_Name: StateText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -743,6 +743,8 @@ GameObject:
   - component: {fileID: 405664304}
   - component: {fileID: 405664306}
   - component: {fileID: 405664305}
+  - component: {fileID: 4389070932132021476}
+  - component: {fileID: 557777531}
   m_Layer: 5
   m_Name: PistolProduct
   m_TagString: Untagged
@@ -810,6 +812,80 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &4389070932132021476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 405664303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.5943396, g: 0.5943396, b: 0.5943396, a: 1}
+    m_PressedColor: {r: 0.5377358, g: 0.5377358, b: 0.5377358, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 1, g: 1, b: 1, a: 1}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 405664305}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 557777531}
+        m_TargetAssemblyTypeName: GunInShopProduct, Assembly-CSharp
+        m_MethodName: BuyGun
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &557777531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 405664303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60dd9f9ef6c50d24ba1ae7481077b85f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weapon: {fileID: 11400000, guid: 720b0095ac5b3ba4783064d3b9f62437, type: 2}
+  price: 0
+  bought: 1
+  stateText: {fileID: 919891152}
+  playerShooting: {fileID: 0}
+  gameManager: {fileID: 0}
 --- !u!1 &539283730
 GameObject:
   m_ObjectHideFlags: 0
@@ -845,8 +921,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -117.7361}
-  m_SizeDelta: {x: 157.24, y: 88.6265}
+  m_AnchoredPosition: {x: 0, y: -96.733154}
+  m_SizeDelta: {x: 157.24, y: 46.6206}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &539283733
 CanvasRenderer:
@@ -980,8 +1056,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -117.736084}
-  m_SizeDelta: {x: 157.24, y: 88.6265}
+  m_AnchoredPosition: {x: 0, y: -96.733154}
+  m_SizeDelta: {x: 157.24, y: 46.6206}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &539284799
 CanvasRenderer:
@@ -1115,8 +1191,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -117.7361}
-  m_SizeDelta: {x: 157.24, y: 88.6265}
+  m_AnchoredPosition: {x: 0, y: -116.55614}
+  m_SizeDelta: {x: 157.24, y: 86.2666}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &577386938
 CanvasRenderer:
@@ -1250,8 +1326,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -117.7361}
-  m_SizeDelta: {x: 157.24, y: 88.6265}
+  m_AnchoredPosition: {x: 0, y: -96.733154}
+  m_SizeDelta: {x: 157.24, y: 46.6206}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &605857188
 CanvasRenderer:
@@ -1362,7 +1438,7 @@ GameObject:
   - component: {fileID: 610370869}
   - component: {fileID: 610370868}
   m_Layer: 5
-  m_Name: Prize
+  m_Name: StateText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1575,7 +1651,7 @@ GameObject:
   - component: {fileID: 723775524}
   - component: {fileID: 723775523}
   m_Layer: 5
-  m_Name: Prize
+  m_Name: StateText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1811,8 +1887,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -117.7361}
-  m_SizeDelta: {x: 157.24, y: 88.6265}
+  m_AnchoredPosition: {x: 0, y: -96.733154}
+  m_SizeDelta: {x: 157.24, y: 46.6206}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &755566617
 CanvasRenderer:
@@ -1923,7 +1999,7 @@ GameObject:
   - component: {fileID: 852338762}
   - component: {fileID: 852338761}
   m_Layer: 5
-  m_Name: Prize
+  m_Name: StateText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2058,7 +2134,7 @@ GameObject:
   - component: {fileID: 919891153}
   - component: {fileID: 919891152}
   m_Layer: 5
-  m_Name: Prize
+  m_Name: StateText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2112,7 +2188,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 100000$
+  m_text: Equipped
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8a89fa14b10d46a99122fd4f73fca9a2, type: 2}
   m_sharedMaterial: {fileID: 2140474, guid: 8a89fa14b10d46a99122fd4f73fca9a2, type: 2}
@@ -2245,7 +2321,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 1, g: 1, b: 1, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -2259,7 +2335,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 1473091871}
   m_FillRect: {fileID: 1473091870}
   m_HandleRect: {fileID: 0}
@@ -2306,8 +2382,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -117.7361}
-  m_SizeDelta: {x: 157.24, y: 88.6265}
+  m_AnchoredPosition: {x: 0, y: -96.733154}
+  m_SizeDelta: {x: 157.24, y: 46.6206}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1048856870
 CanvasRenderer:
@@ -2573,6 +2649,8 @@ GameObject:
   - component: {fileID: 1184546878}
   - component: {fileID: 1184546880}
   - component: {fileID: 1184546879}
+  - component: {fileID: 3048193131456439753}
+  - component: {fileID: 570953795}
   m_Layer: 5
   m_Name: SniperProduct
   m_TagString: Untagged
@@ -2640,6 +2718,80 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &3048193131456439753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1184546877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.5943396, g: 0.5943396, b: 0.5943396, a: 1}
+    m_PressedColor: {r: 0.5377358, g: 0.5377358, b: 0.5377358, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 1, g: 1, b: 1, a: 1}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1184546879}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 570953795}
+        m_TargetAssemblyTypeName: GunInShopProduct, Assembly-CSharp
+        m_MethodName: BuyGun
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &570953795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1184546877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60dd9f9ef6c50d24ba1ae7481077b85f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weapon: {fileID: 11400000, guid: 23ef04ba99de7a147826e690e2563b5a, type: 2}
+  price: 200
+  bought: 0
+  stateText: {fileID: 404836221}
+  playerShooting: {fileID: 0}
+  gameManager: {fileID: 0}
 --- !u!1 &1211648731
 GameObject:
   m_ObjectHideFlags: 0
@@ -3080,8 +3232,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -117.73607}
-  m_SizeDelta: {x: 157.24, y: 88.6265}
+  m_AnchoredPosition: {x: 0, y: -116.55614}
+  m_SizeDelta: {x: 157.24, y: 86.2666}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1330920193
 CanvasRenderer:
@@ -3395,7 +3547,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.43529412, g: 0.43529412, b: 0.43529412, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3424,7 +3576,7 @@ GameObject:
   - component: {fileID: 1731489334}
   - component: {fileID: 1731489333}
   m_Layer: 5
-  m_Name: Prize
+  m_Name: StateText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3582,8 +3734,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -117.7361}
-  m_SizeDelta: {x: 157.24, y: 88.6265}
+  m_AnchoredPosition: {x: 0, y: -96.733154}
+  m_SizeDelta: {x: 157.24, y: 46.6206}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1747189595
 CanvasRenderer:
@@ -3772,7 +3924,7 @@ GameObject:
   - component: {fileID: 1953660327}
   - component: {fileID: 1953660326}
   m_Layer: 5
-  m_Name: Prize
+  m_Name: StateText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3930,8 +4082,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -117.7361}
-  m_SizeDelta: {x: 157.24, y: 88.6265}
+  m_AnchoredPosition: {x: 0, y: -96.733154}
+  m_SizeDelta: {x: 157.24, y: 46.6206}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1984697678
 CanvasRenderer:
@@ -4041,6 +4193,8 @@ GameObject:
   - component: {fileID: 1987907442}
   - component: {fileID: 1987907444}
   - component: {fileID: 1987907443}
+  - component: {fileID: 4049691084785599384}
+  - component: {fileID: 1115081345}
   m_Layer: 5
   m_Name: RifleProduct
   m_TagString: Untagged
@@ -4108,6 +4262,80 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &4049691084785599384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1987907441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.5943396, g: 0.5943396, b: 0.5943396, a: 1}
+    m_PressedColor: {r: 0.5377358, g: 0.5377358, b: 0.5377358, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 1, g: 1, b: 1, a: 1}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1987907443}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1115081345}
+        m_TargetAssemblyTypeName: GunInShopProduct, Assembly-CSharp
+        m_MethodName: BuyGun
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1115081345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1987907441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60dd9f9ef6c50d24ba1ae7481077b85f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weapon: {fileID: 11400000, guid: 8cb8032be7f119e418b2559d6302a852, type: 2}
+  price: 100
+  bought: 0
+  stateText: {fileID: 852338761}
+  playerShooting: {fileID: 0}
+  gameManager: {fileID: 0}
 --- !u!1 &1995396160
 GameObject:
   m_ObjectHideFlags: 0
@@ -4120,7 +4348,7 @@ GameObject:
   - component: {fileID: 1995396163}
   - component: {fileID: 1995396162}
   m_Layer: 5
-  m_Name: Prize
+  m_Name: StateText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4255,7 +4483,7 @@ GameObject:
   - component: {fileID: 2039855253}
   - component: {fileID: 2039855252}
   m_Layer: 5
-  m_Name: Prize
+  m_Name: StateText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4466,7 +4694,7 @@ GameObject:
   - component: {fileID: 2138364612}
   - component: {fileID: 2138364611}
   m_Layer: 5
-  m_Name: Prize
+  m_Name: StateText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5026,7 +5254,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.05490196, g: 0.9529412, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -5108,7 +5336,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 1, g: 1, b: 1, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -5122,7 +5350,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 8342558895374750025}
   m_FillRect: {fileID: 8342558895374750022}
   m_HandleRect: {fileID: 0}

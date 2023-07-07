@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerShooting : MonoBehaviour
 {
     [SerializeField] private Weapon currentWeapon;
+    [SerializeField] private Weapon firstWeapon;
     [SerializeField] private float damagePerHit;
     [SerializeField] private int maxAmmo;
     [SerializeField] private float reloadTime;
@@ -23,7 +24,7 @@ public class PlayerShooting : MonoBehaviour
 
     private void Start()
     {
-        SelectWeapon(currentWeapon); // delete this when shop will be in building
+        SelectWeapon(firstWeapon); // first weapon
     }
 
     private void OnEnable()
@@ -58,7 +59,6 @@ public class PlayerShooting : MonoBehaviour
     public void SelectWeapon(Weapon newWeapon)
     {
         currentWeapon = newWeapon;
-        Debug.Log("Selected " + currentWeapon);
 
         damagePerHit = currentWeapon.damagePerHit;
         maxAmmo = currentWeapon.maxAmmo;
