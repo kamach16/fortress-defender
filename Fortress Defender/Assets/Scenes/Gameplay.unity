@@ -6873,6 +6873,17 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1491506747 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1491506747, guid: 7e76d889aeed46c4fa2057ebd096d818, type: 3}
+  m_PrefabInstance: {fileID: 8342558895068735441}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1536313592
 GameObject:
   m_ObjectHideFlags: 0
@@ -11917,6 +11928,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 15158912, guid: 7e76d889aeed46c4fa2057ebd096d818, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 15158916, guid: 7e76d889aeed46c4fa2057ebd096d818, type: 3}
       propertyPath: gameManager
       value: 
@@ -11953,6 +11968,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1491506747, guid: 7e76d889aeed46c4fa2057ebd096d818, type: 3}
+      propertyPath: m_text
+      value: 'SOLDIERS: 0'
+      objectReference: {fileID: 0}
     - target: {fileID: 1623007409, guid: 7e76d889aeed46c4fa2057ebd096d818, type: 3}
       propertyPath: gameManager
       value: 
@@ -11961,6 +11980,10 @@ PrefabInstance:
       propertyPath: soldiersContainer
       value: 
       objectReference: {fileID: 316456418}
+    - target: {fileID: 1623007409, guid: 7e76d889aeed46c4fa2057ebd096d818, type: 3}
+      propertyPath: soldiersAmountText
+      value: 
+      objectReference: {fileID: 1491506747}
     - target: {fileID: 8342558895374750022, guid: 7e76d889aeed46c4fa2057ebd096d818, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0

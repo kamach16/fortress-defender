@@ -9,7 +9,10 @@ public class SoldierInShopProduct : MonoBehaviour
     [SerializeField] private Transform soldiersContainer;
     [SerializeField] private int price;
     [SerializeField] private TextMeshProUGUI priceText;
+    [SerializeField] private TextMeshProUGUI soldiersAmountText;
     [SerializeField] private GameManager gameManager;
+
+    private int soldiersAmount = 0;
 
     private void Start()
     {
@@ -22,6 +25,8 @@ public class SoldierInShopProduct : MonoBehaviour
         {
             Instantiate(soldierPrefab, soldiersContainer);
             gameManager.SubtractMoney(price);
+            soldiersAmount++;
+            soldiersAmountText.text = "SOLDIERS: " + soldiersAmount;
         }
     }
 }
