@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &15158913
 RectTransform:
   m_ObjectHideFlags: 0
@@ -51,9 +51,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 545.0447, y: -31.729248}
-  m_SizeDelta: {x: 935.6703, y: -309.88818}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 77.20947, y: -31.72931}
+  m_SizeDelta: {x: 935.6704, y: -309.88818}
+  m_Pivot: {x: 0, y: 0.5}
 --- !u!222 &15158915
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -105,6 +105,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
+  playerHealth: {fileID: 0}
+  healthText: {fileID: 756065760}
+  shieldText: {fileID: 576381923}
 --- !u!1 &50243651
 GameObject:
   m_ObjectHideFlags: 0
@@ -3599,6 +3602,7 @@ MonoBehaviour:
   soldiersContainer: {fileID: 0}
   price: 50
   priceText: {fileID: 1953660326}
+  soldiersAmountText: {fileID: 1491506747}
   gameManager: {fileID: 0}
 --- !u!1 &1301960815
 GameObject:
@@ -4258,7 +4262,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'SOLDIERS: 12'
+  m_text: 'SOLDIERS: 0'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8a89fa14b10d46a99122fd4f73fca9a2, type: 2}
   m_sharedMaterial: {fileID: 2140474, guid: 8a89fa14b10d46a99122fd4f73fca9a2, type: 2}

@@ -6873,17 +6873,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1491506747 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1491506747, guid: 7e76d889aeed46c4fa2057ebd096d818, type: 3}
-  m_PrefabInstance: {fileID: 8342558895068735441}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1536313592
 GameObject:
   m_ObjectHideFlags: 0
@@ -10172,17 +10161,6 @@ Transform:
   m_Father: {fileID: 1266034451}
   m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2050271016 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4864753785132998301, guid: bcdc1bc906f3bb94ea8a492e30fb2ed8, type: 3}
-  m_PrefabInstance: {fileID: 4864753786361452720}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8fa0529eb8d09e4b8fd6856ceb5360e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2051249036
 GameObject:
   m_ObjectHideFlags: 0
@@ -11819,10 +11797,6 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 963194227}
-    - target: {fileID: 480915170, guid: de06f59af17582c44af210e0d576c1ec, type: 3}
-      propertyPath: enemySpawner
-      value: 
-      objectReference: {fileID: 2050271016}
     - target: {fileID: 546477528, guid: de06f59af17582c44af210e0d576c1ec, type: 3}
       propertyPath: m_Camera
       value: 
@@ -11839,10 +11813,6 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 963194227}
-    - target: {fileID: 1712820048, guid: de06f59af17582c44af210e0d576c1ec, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8049337472351394842, guid: de06f59af17582c44af210e0d576c1ec, type: 3}
       propertyPath: mainCamera
       value: 
@@ -11852,17 +11822,9 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 108940383}
     - target: {fileID: 8049337472351394842, guid: de06f59af17582c44af210e0d576c1ec, type: 3}
-      propertyPath: firstWeapon
-      value: 
-      objectReference: {fileID: 11400000, guid: 720b0095ac5b3ba4783064d3b9f62437, type: 2}
-    - target: {fileID: 8049337472351394842, guid: de06f59af17582c44af210e0d576c1ec, type: 3}
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 1812185288000313007}
-    - target: {fileID: 8049337472351394842, guid: de06f59af17582c44af210e0d576c1ec, type: 3}
-      propertyPath: currentWeapon
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 8049337472876036608, guid: de06f59af17582c44af210e0d576c1ec, type: 3}
       propertyPath: m_Name
       value: Fortress
@@ -11928,14 +11890,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 15158912, guid: 7e76d889aeed46c4fa2057ebd096d818, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 15158916, guid: 7e76d889aeed46c4fa2057ebd096d818, type: 3}
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 1812185288000313007}
+    - target: {fileID: 15158916, guid: 7e76d889aeed46c4fa2057ebd096d818, type: 3}
+      propertyPath: playerHealth
+      value: 
+      objectReference: {fileID: 1028950145}
     - target: {fileID: 557777531, guid: 7e76d889aeed46c4fa2057ebd096d818, type: 3}
       propertyPath: gameManager
       value: 
@@ -11960,18 +11922,6 @@ PrefabInstance:
       propertyPath: playerShooting
       value: 
       objectReference: {fileID: 1267467134}
-    - target: {fileID: 1473091870, guid: 7e76d889aeed46c4fa2057ebd096d818, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1473091870, guid: 7e76d889aeed46c4fa2057ebd096d818, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1491506747, guid: 7e76d889aeed46c4fa2057ebd096d818, type: 3}
-      propertyPath: m_text
-      value: 'SOLDIERS: 0'
-      objectReference: {fileID: 0}
     - target: {fileID: 1623007409, guid: 7e76d889aeed46c4fa2057ebd096d818, type: 3}
       propertyPath: gameManager
       value: 
@@ -11980,18 +11930,6 @@ PrefabInstance:
       propertyPath: soldiersContainer
       value: 
       objectReference: {fileID: 316456418}
-    - target: {fileID: 1623007409, guid: 7e76d889aeed46c4fa2057ebd096d818, type: 3}
-      propertyPath: soldiersAmountText
-      value: 
-      objectReference: {fileID: 1491506747}
-    - target: {fileID: 8342558895374750022, guid: 7e76d889aeed46c4fa2057ebd096d818, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8342558895374750022, guid: 7e76d889aeed46c4fa2057ebd096d818, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8342558896088427232, guid: 7e76d889aeed46c4fa2057ebd096d818, type: 3}
       propertyPath: m_Pivot.x
       value: 0

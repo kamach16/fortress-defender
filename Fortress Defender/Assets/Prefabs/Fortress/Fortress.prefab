@@ -1198,7 +1198,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1712820049
 Transform:
   m_ObjectHideFlags: 0
@@ -1584,8 +1584,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 592adb1dec78ef243813163045e1e495, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentWeapon: {fileID: 11400000, guid: 8cb8032be7f119e418b2559d6302a852, type: 2}
-  firstWeapon: {fileID: 0}
+  currentWeapon: {fileID: 0}
+  firstWeapon: {fileID: 11400000, guid: 720b0095ac5b3ba4783064d3b9f62437, type: 2}
   damagePerHit: 0
   maxAmmo: 0
   reloadTime: 0
@@ -1744,7 +1744,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3a91cbca2519024c9c6c5b20c218d20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1000
+  health: 100
   gunmen: {fileID: 1712820048}
   gameManager: {fileID: 0}
   playerHealthDisplay: {fileID: 0}
