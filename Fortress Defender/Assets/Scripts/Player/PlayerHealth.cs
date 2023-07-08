@@ -47,4 +47,10 @@ public class PlayerHealth : MonoBehaviour
         health = Mathf.Min(health + healthToAdd, maxHealth); // if health will be higher than 100, then return 100
         playerHealthDisplay.UpdateHealth(health);
     }
+
+    public void AddShield(float shieldToAdd)
+    {
+        shield = Mathf.Min(shield + shieldToAdd, maxShield); // if shield will be higher than 100, then return 100
+        playerShieldDisplay.UpdateShield(shield);
+    }
 }

@@ -162,8 +162,8 @@ RectTransform:
   m_GameObject: {fileID: 409553353}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 1.19}
-  m_LocalScale: {x: 0.9999999, y: 1, z: 0.9999999}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.8500001, y: 0.8500001, z: 0.8500001}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1167165122}
   m_Father: {fileID: 1598692436}
@@ -263,7 +263,7 @@ RectTransform:
   m_GameObject: {fileID: 546477524}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 1.17}
-  m_LocalScale: {x: 0.99999976, y: 1, z: 0.99999976}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1927789889}
@@ -364,8 +364,8 @@ RectTransform:
   m_GameObject: {fileID: 724500754}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 1.16}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.85858, y: 0.85858, z: 0.85858}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1490359841}
   m_Father: {fileID: 1633902511}
@@ -563,7 +563,7 @@ RectTransform:
   m_GameObject: {fileID: 998867838}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 1.19}
-  m_LocalScale: {x: 0.99999964, y: 1, z: 0.99999964}
+  m_LocalScale: {x: 0.89393, y: 0.89393, z: 0.89393}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1753037043}
@@ -664,7 +664,7 @@ RectTransform:
   m_GameObject: {fileID: 1085514456}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 1.16}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.81969327, y: 0.81969327, z: 0.81969327}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1967350389}
@@ -1746,9 +1746,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   maxHealth: 100
+  shield: 0
+  maxShield: 100
   gunmen: {fileID: 1712820048}
   gameManager: {fileID: 0}
   playerHealthDisplay: {fileID: 0}
+  playerShieldDisplay: {fileID: 0}
 --- !u!1 &8049337473647980734
 GameObject:
   m_ObjectHideFlags: 0
