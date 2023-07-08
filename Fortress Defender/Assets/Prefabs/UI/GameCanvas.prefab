@@ -2754,7 +2754,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -96.733154}
-  m_SizeDelta: {x: 157.24, y: 46.6206}
+  m_SizeDelta: {x: 161.49, y: 46.6206}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1048856870
 CanvasRenderer:
@@ -2784,7 +2784,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: REPAIR
+  m_text: REPAIR +20
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8a89fa14b10d46a99122fd4f73fca9a2, type: 2}
   m_sharedMaterial: {fileID: 2140474, guid: 8a89fa14b10d46a99122fd4f73fca9a2, type: 2}
@@ -4009,6 +4009,7 @@ GameObject:
   - component: {fileID: 1442761853}
   - component: {fileID: 1442761852}
   - component: {fileID: 6304699521316256162}
+  - component: {fileID: 507837599}
   m_Layer: 5
   m_Name: RepairProduct
   m_TagString: Untagged
@@ -4120,6 +4121,25 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &507837599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1442761850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9267350905462ce4d8a62e38b48c08f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  price: 50
+  healthToAdd: 20
+  healthText: {fileID: 756065760}
+  priceText: {fileID: 2138364611}
+  nameText: {fileID: 1048856869}
+  playerHealth: {fileID: 0}
+  gameManager: {fileID: 0}
 --- !u!1 &1473091869
 GameObject:
   m_ObjectHideFlags: 0
@@ -5511,7 +5531,7 @@ GameObject:
   - component: {fileID: 2138364612}
   - component: {fileID: 2138364611}
   m_Layer: 5
-  m_Name: StateText
+  m_Name: PrizeText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

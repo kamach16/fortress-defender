@@ -22,7 +22,7 @@ public class ShopScreen : MonoBehaviour
 
     private void UpdateTexts()
     {
-        healthText.text = "HEALTH: " + playerHealth.health.ToString() + "/100";
+        healthText.text = "HEALTH: " + playerHealth.health.ToString() + "/" + playerHealth.maxHealth.ToString();
         // set shield text
     }
 }

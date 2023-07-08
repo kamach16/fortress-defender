@@ -11,6 +11,11 @@ public class Gunman : MonoBehaviour
 
     private void Awake()
     {
+        SetVariables();
+    }
+
+    private void SetVariables()
+    {
         enemySpawner = FindObjectOfType<EnemySpawner>();
     }
 

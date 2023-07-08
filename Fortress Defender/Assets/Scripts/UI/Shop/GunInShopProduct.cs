@@ -16,6 +16,11 @@ public class GunInShopProduct : MonoBehaviour
 
     private void Start()
     {
+        SetVariables();
+    }
+
+    private void SetVariables()
+    {
         if (!equipped) stateText.text = price.ToString() + "$"; // every state text is changing except pistol  
     }
 

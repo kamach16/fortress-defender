@@ -205,7 +205,7 @@ MonoBehaviour:
   isDied: 0
   moneyToAdd: 100
   hitSplatVFX: {fileID: 3013581403188799115}
-  damage: 1
+  damage: 10
   gunShotVFX: {fileID: 4356886693095084702}
   animator: {fileID: 1383406320486531469}
   myColliders:

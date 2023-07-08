@@ -16,6 +16,11 @@ public class SoldierInShopProduct : MonoBehaviour
 
     private void Start()
     {
+        SetVariables();
+    }
+
+    private void SetVariables()
+    {
         priceText.text = price.ToString() + "$";
     }
 

@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour
 {
     [SerializeField] public float health;
+    [SerializeField] public float maxHealth;
     [SerializeField] private GameObject gunmen;
     [SerializeField] private GameManager gameManager;
     [SerializeField] private PlayerHealthDisplay playerHealthDisplay;
@@ -21,5 +22,11 @@ public class PlayerHealth : MonoBehaviour
             gameManager.LoseGame();
             gunmen.SetActive(false);
         }
+    }
+
+    public void AddHealth(float healthToAdd)
+    {
+        health = Mathf.Min(health + healthToAdd, maxHealth); // if health will be higher than 100, then return 100
+        playerHealthDisplay.UpdateHealth(health);
     }
 }
