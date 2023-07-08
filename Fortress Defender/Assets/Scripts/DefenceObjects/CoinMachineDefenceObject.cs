@@ -11,6 +11,11 @@ public class CoinMachineDefenceObject : MonoBehaviour
 
     private void Awake()
     {
+        SetVariables();
+    }
+
+    private void SetVariables()
+    {
         gameManager = FindObjectOfType<GameManager>();
     }
 

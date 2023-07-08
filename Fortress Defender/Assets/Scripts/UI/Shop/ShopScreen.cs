@@ -5,14 +5,18 @@ using TMPro;
 
 public class ShopScreen : MonoBehaviour
 {
-    [SerializeField] private GameManager gameManager;
-    [SerializeField] private PlayerHealth playerHealth;
     [SerializeField] private TextMeshProUGUI healthText;
     [SerializeField] private TextMeshProUGUI shieldText;
+    [SerializeField] private GameObject defenceObjectsContainer;
+    [SerializeField] private GameObject defenceObjectsPreShow;
+    [SerializeField] public Transform towerPlaceSpot;
+    [SerializeField] private GameManager gameManager;
+    [SerializeField] private PlayerHealth playerHealth;
 
     private void OnEnable()
     {
         UpdateTexts();
+        HideDefenceObjectsContainer();
     }
 
     public void ContinueGame()
@@ -24,5 +28,19 @@ public class ShopScreen : MonoBehaviour
     {
         healthText.text = "HEALTH: " + playerHealth.health.ToString() + "/" + playerHealth.maxHealth.ToString();
         shieldText.text = "SHIELD: " + playerHealth.shield.ToString() + "/" + playerHealth.maxShield.ToString();
+    }
+
+    public void SelectTowerSpot(Transform selectedTowerSpot)
+    {
+        defenceObjectsPreShow.SetActive(false);
+        defenceObjectsContainer.SetActive(true);
+
+        towerPlaceSpot = selectedTowerSpot;
+    }
+
+    private void HideDefenceObjectsContainer()
+    {
+        defenceObjectsPreShow.SetActive(true);
+        defenceObjectsContainer.SetActive(false);
     }
 }

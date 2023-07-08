@@ -15,6 +15,16 @@ public class LaserDefenceObject : MonoBehaviour
 
     private int randomEnemyIndex;
 
+    private void Awake()
+    {
+        SetVariables();
+    }
+
+    private void SetVariables()
+    {
+        enemySpawner = FindObjectOfType<EnemySpawner>();
+    }
+
     private IEnumerator Start()
     {
         while (true)

@@ -10,9 +10,13 @@ public class AirForceDefenceObject : MonoBehaviour
 
     private void Awake()
     {
-        droneSpawnPosition = GameObject.FindGameObjectWithTag("DroneSpawnPoint").transform;
+        SetVariables();
     }
 
+    private void SetVariables()
+    {
+        droneSpawnPosition = GameObject.FindGameObjectWithTag("DroneSpawnPoint").transform;
+    }
     private IEnumerator Start()
     {
         yield return new WaitForSeconds(timeBetweenDroneArrival);
