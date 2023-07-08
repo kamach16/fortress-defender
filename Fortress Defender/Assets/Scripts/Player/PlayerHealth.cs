@@ -6,16 +6,34 @@ public class PlayerHealth : MonoBehaviour
 {
     [SerializeField] public float health;
     [SerializeField] public float maxHealth;
+    [SerializeField] public float shield;
+    [SerializeField] public float maxShield;
     [SerializeField] private GameObject gunmen;
     [SerializeField] private GameManager gameManager;
     [SerializeField] private PlayerHealthDisplay playerHealthDisplay;
+    [SerializeField] private PlayerShieldDisplay playerShieldDisplay;
 
     public void TakeDamage(float damage)
     {
         if (gameManager.lost) return;
 
-        health = Mathf.Max(health - damage, 0); // if health will be below 0, then return 0
-        playerHealthDisplay.UpdateHealth(health);
+        if (shield <= 0)
+        {
+            health = Mathf.Max(health - damage, 0); // if health will be below 0, then return 0
+            playerHealthDisplay.UpdateHealth(health);
+        }
+        else if (shield > 0)
+        {
+            if(damage > shield)
+            {
+                float extraDamage = damage - shield;
+                health = Mathf.Max(health - extraDamage, 0); // if health will be below 0, then return 0
+                playerHealthDisplay.UpdateHealth(health);
+            }
+
+            shield = Mathf.Max(shield - damage, 0); // if shield will be below 0, then return 0
+            playerShieldDisplay.UpdateShield(shield);
+        }
 
         if (health <= 0)
         {
