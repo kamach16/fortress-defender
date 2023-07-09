@@ -32,7 +32,7 @@ public class AirForceDefenceObject : MonoBehaviour
 
     private void DroneArrival()
     {
-        if (enemySpawner.currentEnemies.Count != 0)
+        if (enemySpawner.spawnedEnemiesList.Count != 0)
         {
             GameObject drone = Instantiate(dronePrefab, droneSpawnPosition.position, dronePrefab.transform.rotation);
         }

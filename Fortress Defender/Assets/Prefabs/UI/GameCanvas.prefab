@@ -1856,7 +1856,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   towerPrefab: {fileID: 2587273102256246275, guid: c656ed8c9375862439ed53f978b35b6e, type: 3}
-  price: 50
+  price: 1900
   priceText: {fileID: 59061004}
   shopScreen: {fileID: 15158916}
   gameManager: {fileID: 0}
@@ -2085,7 +2085,7 @@ GameObject:
   - component: {fileID: 4975782577271915477}
   - component: {fileID: 1900442308}
   m_Layer: 5
-  m_Name: MissileLauncherProduct
+  m_Name: CoinMachineProduct
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2219,8 +2219,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dae5e78290ffe9c4e8b0bd19329bb17c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  towerPrefab: {fileID: 7057405351761855000, guid: d91b821e2d2877d4686a4b764edea836, type: 3}
-  price: 50
+  towerPrefab: {fileID: 8703009953049454774, guid: acc92240f3bd04443aaef6390ffd92b5, type: 3}
+  price: 1000
   priceText: {fileID: 610370868}
   shopScreen: {fileID: 15158916}
   gameManager: {fileID: 0}
@@ -3255,7 +3255,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   towerPrefab: {fileID: 8322047556177581262, guid: 200d9da512963044da03dc2a1e2030f1, type: 3}
-  price: 50
+  price: 700
   priceText: {fileID: 1731489333}
   shopScreen: {fileID: 15158916}
   gameManager: {fileID: 0}
@@ -3915,7 +3915,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   soldierPrefab: {fileID: 3239330504625849892, guid: 026b41b67731c1a47884e2dde8486465, type: 3}
   soldiersContainer: {fileID: 0}
-  price: 50
+  price: 300
   priceText: {fileID: 1953660326}
   soldiersAmountText: {fileID: 1491506747}
   gameManager: {fileID: 0}
@@ -4338,7 +4338,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   towerPrefab: {fileID: 7710424567005136794, guid: b933d8ab08c6142479e04d602438b790, type: 3}
-  price: 50
+  price: 1300
   priceText: {fileID: 2039855252}
   shopScreen: {fileID: 15158916}
   gameManager: {fileID: 0}
@@ -5164,7 +5164,7 @@ GameObject:
   - component: {fileID: 5755642803443366608}
   - component: {fileID: 89455496}
   m_Layer: 5
-  m_Name: CoinMachineProduct
+  m_Name: MissileLauncherProduct
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5298,8 +5298,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dae5e78290ffe9c4e8b0bd19329bb17c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  towerPrefab: {fileID: 8703009953049454774, guid: acc92240f3bd04443aaef6390ffd92b5, type: 3}
-  price: 50
+  towerPrefab: {fileID: 7057405351761855000, guid: d91b821e2d2877d4686a4b764edea836, type: 3}
+  price: 850
   priceText: {fileID: 1995396162}
   shopScreen: {fileID: 15158916}
   gameManager: {fileID: 0}

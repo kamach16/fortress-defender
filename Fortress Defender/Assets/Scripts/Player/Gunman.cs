@@ -32,11 +32,11 @@ public class Gunman : MonoBehaviour
 
     private void DealDamage()
     {
-        int randomEnemyIndex = Random.Range(0, enemySpawner.currentEnemies.Count);
+        int randomEnemyIndex = Random.Range(0, enemySpawner.spawnedEnemiesList.Count);
 
-        if (enemySpawner.currentEnemies.Count != 0)
+        if (enemySpawner.spawnedEnemiesList.Count != 0)
         {
-            EnemyController targetedEnemy = enemySpawner.currentEnemies[randomEnemyIndex];
+            EnemyController targetedEnemy = enemySpawner.spawnedEnemiesList[randomEnemyIndex];
 
             targetedEnemy.TakeDamage(damagePerHit, targetedEnemy.transform.position + new Vector3(0, 1.5f, 0));
         }

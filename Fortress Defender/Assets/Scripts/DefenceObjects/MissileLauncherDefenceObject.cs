@@ -44,9 +44,9 @@ public class MissileLauncherDefenceObject : MonoBehaviour
 
     private void LookAtTarget()
     {
-        if (enemySpawner.currentEnemies.Count != 0 && randomEnemyIndex < enemySpawner.currentEnemies.Count)
+        if (enemySpawner.spawnedEnemiesList.Count != 0 && randomEnemyIndex < enemySpawner.spawnedEnemiesList.Count)
         {
-            EnemyController targetedEnemy = enemySpawner.currentEnemies[randomEnemyIndex];
+            EnemyController targetedEnemy = enemySpawner.spawnedEnemiesList[randomEnemyIndex];
 
             Quaternion targetRotation = Quaternion.LookRotation(turretModel.position - (targetedEnemy.transform.position + new Vector3(0, 1.5f, 0)));
             turretModel.rotation = Quaternion.Slerp(turretModel.rotation, targetRotation, rotationSpeed * Time.deltaTime);
@@ -55,9 +55,9 @@ public class MissileLauncherDefenceObject : MonoBehaviour
 
     private void LaunchMissile()
     {
-        randomEnemyIndex = Random.Range(0, enemySpawner.currentEnemies.Count);
+        randomEnemyIndex = Random.Range(0, enemySpawner.spawnedEnemiesList.Count);
 
-        if (enemySpawner.currentEnemies.Count != 0)
+        if (enemySpawner.spawnedEnemiesList.Count != 0)
         {
             GameObject missile = Instantiate(missilePrefab, missileSpawnPositon.position, missileSpawnPositon.rotation);
             launchMissileVFX.Play();

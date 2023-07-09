@@ -181,10 +181,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b01bf567920640e48abe76092fec11cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemySpawner: {fileID: 0}
   minTimeBetweenShoots: 0.15
   maxTimeBetweenShoots: 0.3
-  damagePerHit: 0.1
+  damagePerHit: 2
   rotationSpeed: 25
   gunShotVFX: {fileID: 6088091866245676160}
 --- !u!1001 &4857415930365072822

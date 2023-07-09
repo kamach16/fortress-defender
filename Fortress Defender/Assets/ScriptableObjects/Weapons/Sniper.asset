@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f91aba2683e5e424389a163a31c1f971, type: 3}
   m_Name: Sniper
   m_EditorClassIdentifier: 
-  damagePerHit: 5
+  damagePerHit: 25
   maxAmmo: 15
   reloadTime: 4
   fullAuto: 0

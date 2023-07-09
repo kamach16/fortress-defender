@@ -42,9 +42,9 @@ public class HeavyGunDefenceObject : MonoBehaviour
 
     private void LookAtTarget()
     {
-        if (enemySpawner.currentEnemies.Count != 0 && randomEnemyIndex < enemySpawner.currentEnemies.Count)
+        if (enemySpawner.spawnedEnemiesList.Count != 0 && randomEnemyIndex < enemySpawner.spawnedEnemiesList.Count)
         {
-            EnemyController targetedEnemy = enemySpawner.currentEnemies[randomEnemyIndex];
+            EnemyController targetedEnemy = enemySpawner.spawnedEnemiesList[randomEnemyIndex];
 
             Quaternion targetRotation = Quaternion.LookRotation(transform.position - targetedEnemy.transform.position);
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
@@ -53,11 +53,11 @@ public class HeavyGunDefenceObject : MonoBehaviour
 
     private void DealDamage()
     {
-        randomEnemyIndex = Random.Range(0, enemySpawner.currentEnemies.Count);
+        randomEnemyIndex = Random.Range(0, enemySpawner.spawnedEnemiesList.Count);
 
-        if (enemySpawner.currentEnemies.Count != 0)
+        if (enemySpawner.spawnedEnemiesList.Count != 0)
         {
-            EnemyController targetedEnemy = enemySpawner.currentEnemies[randomEnemyIndex];
+            EnemyController targetedEnemy = enemySpawner.spawnedEnemiesList[randomEnemyIndex];
 
             targetedEnemy.TakeDamage(damagePerHit, targetedEnemy.transform.position + new Vector3(0, 1.5f, 0));
             gunShotVFX.Play();

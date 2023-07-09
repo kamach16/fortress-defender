@@ -213,8 +213,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 928a634e2a923384d9e5709cdf356be2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minTimeBetweenShoots: 1
-  maxTimeBetweenShoots: 2
+  minTimeBetweenShoots: 0.5
+  maxTimeBetweenShoots: 0.8
   rotationSpeed: 25
   laserPrefab: {fileID: 4903853911743527555, guid: b28606835e4919d4484d73dbcc8a56bf, type: 3}
   laserSpawnPositon: {fileID: 6902728335308697671}

@@ -45,7 +45,7 @@ public class DroneDefenceObject : MonoBehaviour
 
     private void LaunchSingleMissile()
     {
-        if (enemySpawner.currentEnemies.Count != 0)
+        if (enemySpawner.spawnedEnemiesList.Count != 0)
         {
             GameObject missile = Instantiate(missilePrefab, missileSpawnPosition.position, missilePrefab.transform.rotation);
             Destroy(missile, 3);

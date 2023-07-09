@@ -295,11 +295,11 @@ MonoBehaviour:
   moveSpeed: 7
   stopDistance: 15
   isStopped: 0
-  health: 5
+  health: 25
   isDied: 0
-  moneyToAdd: 100
+  moneyToAdd: 50
   hitSplatVFX: {fileID: 8327098258391496301}
-  damage: 10
+  damage: 4
   gunShotVFX: {fileID: 745842891903567394}
   animator: {fileID: 6934229727542793873}
   myColliders:

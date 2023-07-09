@@ -76,24 +76,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8fa0529eb8d09e4b8fd6856ceb5360e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyTypes:
+  remainingEnemyTypes:
+  - {fileID: 1383406320479218665, guid: 12dbdbfc88bd7e940a9a56eb3033c43f, type: 3}
   - {fileID: 4047005752804845443, guid: 18d96825c4ee63f4cb3d1a82b70a8d80, type: 3}
   - {fileID: 6934229727552246107, guid: 829d4cfb2e38056448911efc5f371793, type: 3}
-  - {fileID: 8286761006858853979, guid: c21e19c388a28ea4daadac8adabbdaad, type: 3}
-  - {fileID: 2802996213199944110, guid: 3b2b49389d5c21b4eab1a1191dceb865, type: 3}
-  - {fileID: 4297018278071534991, guid: 2ea445fd1da5c1348a07810fe95b24ee, type: 3}
-  - {fileID: 7160806335990829747, guid: 8f19137424d751c4c8ea1bd0a1f53aa8, type: 3}
-  - {fileID: 1383406320479218665, guid: 12dbdbfc88bd7e940a9a56eb3033c43f, type: 3}
   - {fileID: 906872586003886751, guid: 4e906b9542d938d4cb12bd1144c3472a, type: 3}
+  - {fileID: 7160806335990829747, guid: 8f19137424d751c4c8ea1bd0a1f53aa8, type: 3}
+  - {fileID: 4297018278071534991, guid: 2ea445fd1da5c1348a07810fe95b24ee, type: 3}
+  - {fileID: 2802996213199944110, guid: 3b2b49389d5c21b4eab1a1191dceb865, type: 3}
   - {fileID: 7441956386854134707, guid: e262d03dba307ed4ca308862592e3a4d, type: 3}
+  currentEnemyTypesToSpawn:
+  - {fileID: 8286761006858853979, guid: c21e19c388a28ea4daadac8adabbdaad, type: 3}
   enemySpawnPoint: {fileID: 1789704896}
   minZPosSpawnOffset: -8
   maxZPosSpawnOffset: 8
   timeBetweenSpawns: 2
-  currentEnemies: []
+  spawnedEnemiesList: []
   killedEnemies: 0
   spawnedEnemies: 0
   enemiesAmountToSpawnPerLevel: 5
+  waveNumber: 0
   fortress: {fileID: 0}
   playerHealth: {fileID: 0}
   gameManager: {fileID: 0}

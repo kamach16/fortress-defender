@@ -120,7 +120,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dronePrefab: {fileID: 7611669416737792407, guid: e96495a37b6a16741b0edf54ff2ec38b, type: 3}
   droneSpawnPosition: {fileID: 0}
-  timeBetweenDroneArrival: 20
+  timeBetweenDroneArrival: 15
 --- !u!1 &2587273102256269933
 GameObject:
   m_ObjectHideFlags: 0

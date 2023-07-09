@@ -7,15 +7,17 @@ using Random = UnityEngine.Random;
 public class EnemySpawner : MonoBehaviour
 {
     [Header("About spawner")]
-    [SerializeField] private List<GameObject> enemyTypes = new List<GameObject>();
+    [SerializeField] private List<GameObject> remainingEnemyTypes = new List<GameObject>();
+    [SerializeField] private List<GameObject> currentEnemyTypesToSpawn = new List<GameObject>();
     [SerializeField] private Transform enemySpawnPoint;
     [SerializeField] private float minZPosSpawnOffset;
     [SerializeField] private float maxZPosSpawnOffset;
     [SerializeField] private float timeBetweenSpawns;
-    [SerializeField] public List<EnemyController> currentEnemies = new List<EnemyController>();
+    [SerializeField] public List<EnemyController> spawnedEnemiesList = new List<EnemyController>();
     [SerializeField] private int killedEnemies;
     [SerializeField] private int spawnedEnemies;
     [SerializeField] private int enemiesAmountToSpawnPerLevel;
+    [SerializeField] private int waveNumber;
 
     [Header("Others")]
     [SerializeField] private Transform fortress;
@@ -25,11 +27,13 @@ public class EnemySpawner : MonoBehaviour
     private void OnEnable()
     {
         GameManager.OnNewLevelStarted += RestartSpawner;
+        GameManager.OnNewLevelStarted += BuffSpawner;
     }
 
     private void OnDisable()
     {
         GameManager.OnNewLevelStarted -= RestartSpawner;
+        GameManager.OnNewLevelStarted -= BuffSpawner;
     }
 
     private IEnumerator Start()
@@ -59,13 +63,13 @@ public class EnemySpawner : MonoBehaviour
 
     private void AddEnemyToCurrentEnemiesList(EnemyController enemyToAdd)
     {
-        currentEnemies.Add(enemyToAdd);
+        spawnedEnemiesList.Add(enemyToAdd);
     }
 
     public void DeleteEnemy(EnemyController enemyToDelete)
     {
         killedEnemies++;
-        currentEnemies.Remove(enemyToDelete);
+        spawnedEnemiesList.Remove(enemyToDelete);
 
         if (killedEnemies >= enemiesAmountToSpawnPerLevel) gameManager.Invoke("WinLevel", 2f);
     }
@@ -76,9 +80,24 @@ public class EnemySpawner : MonoBehaviour
         spawnedEnemies = 0;
     }
 
+    private void BuffSpawner()
+    {
+        enemiesAmountToSpawnPerLevel++;
+        waveNumber++;
+        timeBetweenSpawns = Mathf.Max(timeBetweenSpawns - 0.1f, 1);
+
+        if (waveNumber % 3 == 0) // run this condition every 3 waves
+        {
+            GameObject newEnemyType = remainingEnemyTypes[0];
+            currentEnemyTypesToSpawn.Add(newEnemyType);
+
+            remainingEnemyTypes.RemoveAt(0);
+        }
+    }
+
     private GameObject GetRandomEnemyType()
     {
-        return enemyTypes[Random.Range(0, enemyTypes.Count)];
+        return currentEnemyTypesToSpawn[Random.Range(0, currentEnemyTypesToSpawn.Count)];
     }
 
     private float GetRandomZOffset()
