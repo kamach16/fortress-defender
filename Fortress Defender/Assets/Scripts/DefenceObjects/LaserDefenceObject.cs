@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class LaserDefenceObject : MonoBehaviour
 {
-    [SerializeField] private EnemySpawner enemySpawner;
     [SerializeField] private float minTimeBetweenShoots;
     [SerializeField] private float maxTimeBetweenShoots;
     [SerializeField] private float rotationSpeed;
@@ -12,6 +11,8 @@ public class LaserDefenceObject : MonoBehaviour
     [SerializeField] private Transform laserSpawnPositon;
     [SerializeField] private Transform turretModel;
     [SerializeField] private ParticleSystem launchLaserVFX;
+
+    private EnemySpawner enemySpawner;
 
     private int randomEnemyIndex;
 

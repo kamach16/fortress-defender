@@ -24,6 +24,8 @@ public class GameManager : MonoBehaviour
 
     public void WinLevel()
     {
+        if (lost) return;
+
         shopScreen.SetActive(true);
 
         if (OnLevelWin != null) OnLevelWin();

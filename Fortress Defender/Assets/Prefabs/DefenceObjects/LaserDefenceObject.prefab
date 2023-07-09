@@ -213,7 +213,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 928a634e2a923384d9e5709cdf356be2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemySpawner: {fileID: 0}
   minTimeBetweenShoots: 1
   maxTimeBetweenShoots: 2
   rotationSpeed: 25
@@ -351,18 +350,6 @@ PrefabInstance:
     - target: {fileID: 655336380024877178, guid: e6b38ff62bdc7c141a390e36f671b128, type: 3}
       propertyPath: m_RootOrder
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 655336380024877178, guid: e6b38ff62bdc7c141a390e36f671b128, type: 3}
-      propertyPath: m_LocalScale.x
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 655336380024877178, guid: e6b38ff62bdc7c141a390e36f671b128, type: 3}
-      propertyPath: m_LocalScale.y
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 655336380024877178, guid: e6b38ff62bdc7c141a390e36f671b128, type: 3}
-      propertyPath: m_LocalScale.z
-      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 655336380024877178, guid: e6b38ff62bdc7c141a390e36f671b128, type: 3}
       propertyPath: m_LocalPosition.x

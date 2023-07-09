@@ -187,6 +187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moneyToAdd: 200
   timeBetweenGettingMoney: 2
+  canAddMoney: 0
 --- !u!1 &8703009953090454286
 GameObject:
   m_ObjectHideFlags: 0

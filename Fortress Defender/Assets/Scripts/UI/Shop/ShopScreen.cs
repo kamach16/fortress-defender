@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class ShopScreen : MonoBehaviour
 {
@@ -13,10 +14,18 @@ public class ShopScreen : MonoBehaviour
     [SerializeField] private GameManager gameManager;
     [SerializeField] private PlayerHealth playerHealth;
 
+    private Image selectedTowerSpotImage;
+
     private void OnEnable()
     {
         UpdateTexts();
         HideDefenceObjectsContainer();
+        SetVariables();
+    }
+
+    private void SetVariables()
+    {
+        if (selectedTowerSpotImage != null) selectedTowerSpotImage.color = new Color32(255, 255, 255, 255);
     }
 
     public void ContinueGame()
@@ -32,10 +41,19 @@ public class ShopScreen : MonoBehaviour
 
     public void SelectTowerSpot(Transform selectedTowerSpot)
     {
+        if (selectedTowerSpotImage != null) selectedTowerSpotImage.color = new Color32(255, 255, 255, 255);
+
         defenceObjectsPreShow.SetActive(false);
         defenceObjectsContainer.SetActive(true);
 
         towerPlaceSpot = selectedTowerSpot;
+    }
+
+    public void ChangeTowerSpotImageColor(Image image)
+    {
+        selectedTowerSpotImage = image;
+
+        image.color = new Color32(0, 185, 255, 255);
     }
 
     private void HideDefenceObjectsContainer()

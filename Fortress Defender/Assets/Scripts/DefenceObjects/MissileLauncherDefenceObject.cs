@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class MissileLauncherDefenceObject : MonoBehaviour
 {
-    [SerializeField] private EnemySpawner enemySpawner;
     [SerializeField] private float minTimeBetweenShoots;
     [SerializeField] private float maxTimeBetweenShoots;
     [SerializeField] private float rotationSpeed;
@@ -12,6 +11,8 @@ public class MissileLauncherDefenceObject : MonoBehaviour
     [SerializeField] private Transform missileSpawnPositon;
     [SerializeField] private Transform turretModel;
     [SerializeField] private ParticleSystem launchMissileVFX;
+
+    private EnemySpawner enemySpawner;
 
     private int randomEnemyIndex;
 
@@ -60,6 +61,7 @@ public class MissileLauncherDefenceObject : MonoBehaviour
         {
             GameObject missile = Instantiate(missilePrefab, missileSpawnPositon.position, missileSpawnPositon.rotation);
             launchMissileVFX.Play();
+            Destroy(missile, 5);
         }
     }
 }

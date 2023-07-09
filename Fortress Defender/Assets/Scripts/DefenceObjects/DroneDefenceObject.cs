@@ -11,6 +11,8 @@ public class DroneDefenceObject : MonoBehaviour
     [SerializeField] private Transform missileSpawnPosition;
     [SerializeField] private bool startedLaunchingMissiles;
 
+    private EnemySpawner enemySpawner;
+
     private void Awake()
     {
         Destroy(gameObject, 15);
@@ -36,10 +38,18 @@ public class DroneDefenceObject : MonoBehaviour
         Move();
     }
 
+    public void SetEnemySpawner(EnemySpawner enemySpawner)
+    {
+        this.enemySpawner = enemySpawner;
+    }
+
     private void LaunchSingleMissile()
     {
-        GameObject missile = Instantiate(missilePrefab, missileSpawnPosition.position, missilePrefab.transform.rotation);
-        Destroy(missile, 3);
+        if (enemySpawner.currentEnemies.Count != 0)
+        {
+            GameObject missile = Instantiate(missilePrefab, missileSpawnPosition.position, missilePrefab.transform.rotation);
+            Destroy(missile, 3);
+        }
     }
 
     private void Move()

@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class HeavyGunDefenceObject : MonoBehaviour
 {
-    [SerializeField] private EnemySpawner enemySpawner;
     [SerializeField] private float minTimeBetweenShoots;
     [SerializeField] private float maxTimeBetweenShoots;
     [SerializeField] private float damagePerHit;
     [SerializeField] private float rotationSpeed;
     [SerializeField] private ParticleSystem gunShotVFX;
+
+    private EnemySpawner enemySpawner;
 
     private int randomEnemyIndex;
 
