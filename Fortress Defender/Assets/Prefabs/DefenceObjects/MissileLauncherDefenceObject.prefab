@@ -244,8 +244,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8970bc25bae34bf479ab2b6df77c694c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minTimeBetweenShoots: 1.5
-  maxTimeBetweenShoots: 2
+  minTimeBetweenShoots: 3
+  maxTimeBetweenShoots: 4
   rotationSpeed: 25
   missilePrefab: {fileID: 245095986909110206, guid: 2c8b878ac27300c419a2e607ac526748, type: 3}
   missileSpawnPositon: {fileID: 6141630425596212677}

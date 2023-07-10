@@ -46,5 +46,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemySpawner: {fileID: 0}
   minTimeBetweenShoots: 3
-  maxTimeBetweenShoots: 3.2
+  maxTimeBetweenShoots: 4
   damagePerHit: 2

@@ -8,11 +8,13 @@ public class ShopScreen : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI healthText;
     [SerializeField] private TextMeshProUGUI shieldText;
+    [SerializeField] private TextMeshProUGUI waveNumberText;
     [SerializeField] private GameObject defenceObjectsContainer;
     [SerializeField] private GameObject defenceObjectsPreShow;
     [SerializeField] public Transform towerPlaceSpot;
     [SerializeField] private GameManager gameManager;
     [SerializeField] private PlayerHealth playerHealth;
+    [SerializeField] private EnemySpawner enemySpawner;
 
     private Image selectedTowerSpotImage;
 
@@ -26,6 +28,7 @@ public class ShopScreen : MonoBehaviour
     private void SetVariables()
     {
         if (selectedTowerSpotImage != null) selectedTowerSpotImage.color = new Color32(255, 255, 255, 255);
+        waveNumberText.text = "WAVE " + (enemySpawner.waveNumber + 1); // + 1 because waveNumber is changing when player click continue button in shop 
     }
 
     public void ContinueGame()

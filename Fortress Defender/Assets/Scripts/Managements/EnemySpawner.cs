@@ -18,7 +18,7 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private int spawnedEnemies;
     [SerializeField] private int enemiesAmountToSpawnPerLevel;
     [SerializeField] private int wavesBetweenNewEnemyType;
-    [SerializeField] private int waveNumber;
+    [SerializeField] public int waveNumber;
 
     [Header("Others")]
     [SerializeField] private Transform fortress;
@@ -85,14 +85,18 @@ public class EnemySpawner : MonoBehaviour
     {
         enemiesAmountToSpawnPerLevel++;
         waveNumber++;
-        timeBetweenSpawns = Mathf.Max(timeBetweenSpawns - 0.075f, 1);
+        timeBetweenSpawns = Mathf.Max(timeBetweenSpawns - 0.075f, 0.5f);
 
         if (waveNumber % wavesBetweenNewEnemyType == 0) // run this condition every e.g. 3 waves (while wavesBetweenNewEnemyType = 3)
         {
-            GameObject newEnemyType = remainingEnemyTypes[0];
-            currentEnemyTypesToSpawn.Add(newEnemyType);
+            if (remainingEnemyTypes.Count > 0)
+            {
+                GameObject newEnemyType = remainingEnemyTypes[0];
 
-            remainingEnemyTypes.RemoveAt(0);
+                currentEnemyTypesToSpawn.Add(newEnemyType);
+
+                remainingEnemyTypes.RemoveAt(0);
+            }
         }
     }
 

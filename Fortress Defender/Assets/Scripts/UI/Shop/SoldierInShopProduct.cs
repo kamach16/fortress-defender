@@ -34,7 +34,7 @@ public class SoldierInShopProduct : MonoBehaviour
     private void SetVariables()
     {
         priceText.text = price.ToString() + "$";
-        soldierBillText.text = "X1 - " + billPerDay + "$/DAY";
+        soldierBillText.text = "X1  -" + billPerDay + "$/DAY";
     }
 
     public void BuySoldier()

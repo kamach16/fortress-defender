@@ -96,7 +96,7 @@ MonoBehaviour:
   spawnedEnemies: 0
   enemiesAmountToSpawnPerLevel: 5
   wavesBetweenNewEnemyType: 4
-  waveNumber: 0
+  waveNumber: 1
   fortress: {fileID: 0}
   playerHealth: {fileID: 0}
   gameManager: {fileID: 0}

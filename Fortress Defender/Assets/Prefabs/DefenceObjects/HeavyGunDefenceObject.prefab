@@ -183,7 +183,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minTimeBetweenShoots: 0.15
   maxTimeBetweenShoots: 0.3
-  damagePerHit: 0.5
+  damagePerHit: 0.3
   rotationSpeed: 25
   gunShotVFX: {fileID: 6088091866245676160}
 --- !u!1001 &4857415930365072822

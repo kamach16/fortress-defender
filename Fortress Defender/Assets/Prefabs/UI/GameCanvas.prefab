@@ -44,12 +44,13 @@ RectTransform:
   - {fileID: 756065759}
   - {fileID: 576381922}
   - {fileID: 2015589572}
+  - {fileID: 685667750}
   m_Father: {fileID: 8342558896088427232}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 77.20947, y: -31.72937}
+  m_AnchoredPosition: {x: 77.20947, y: -31.729462}
   m_SizeDelta: {x: 935.6704, y: -309.88818}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!222 &15158915
@@ -104,11 +105,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthText: {fileID: 756065760}
   shieldText: {fileID: 576381923}
+  waveNumberText: {fileID: 685667751}
   defenceObjectsContainer: {fileID: 1029076839}
   defenceObjectsPreShow: {fileID: 6479532709767936113}
   towerPlaceSpot: {fileID: 0}
   gameManager: {fileID: 0}
   playerHealth: {fileID: 0}
+  enemySpawner: {fileID: 0}
 --- !u!1 &50243651
 GameObject:
   m_ObjectHideFlags: 0
@@ -1099,7 +1102,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: AIR SOFT
+  m_text: AIR FORCE
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8a89fa14b10d46a99122fd4f73fca9a2, type: 2}
   m_sharedMaterial: {fileID: 2140474, guid: 8a89fa14b10d46a99122fd4f73fca9a2, type: 2}
@@ -1722,7 +1725,7 @@ GameObject:
   - component: {fileID: 6948156839724808294}
   - component: {fileID: 572183609}
   m_Layer: 5
-  m_Name: AirSoftProduct
+  m_Name: AirForceProduct
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1857,10 +1860,145 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   towerPrefab: {fileID: 2587273102256246275, guid: c656ed8c9375862439ed53f978b35b6e, type: 3}
-  price: 3000
+  price: 4500
   priceText: {fileID: 59061004}
   shopScreen: {fileID: 15158916}
   gameManager: {fileID: 0}
+--- !u!1 &685667749
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 685667750}
+  - component: {fileID: 685667752}
+  - component: {fileID: 685667751}
+  m_Layer: 5
+  m_Name: WaveNumber
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &685667750
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 685667749}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 15158913}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: -179.40002, y: 0.4}
+  m_SizeDelta: {x: 188.4862, y: 51.194458}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &685667752
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 685667749}
+  m_CullTransparentMesh: 1
+--- !u!114 &685667751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 685667749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: WAVE 2
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8a89fa14b10d46a99122fd4f73fca9a2, type: 2}
+  m_sharedMaterial: {fileID: 2140474, guid: 8a89fa14b10d46a99122fd4f73fca9a2, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 25
+  m_fontSizeBase: 25
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &707381030
 GameObject:
   m_ObjectHideFlags: 0
@@ -2086,7 +2224,7 @@ GameObject:
   - component: {fileID: 4975782577271915477}
   - component: {fileID: 1900442308}
   m_Layer: 5
-  m_Name: CoinMachineProduct
+  m_Name: MissileLauncherProduct
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2220,8 +2358,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dae5e78290ffe9c4e8b0bd19329bb17c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  towerPrefab: {fileID: 8703009953049454774, guid: acc92240f3bd04443aaef6390ffd92b5, type: 3}
-  price: 1500
+  towerPrefab: {fileID: 7057405351761855000, guid: d91b821e2d2877d4686a4b764edea836, type: 3}
+  price: 2500
   priceText: {fileID: 610370868}
   shopScreen: {fileID: 15158916}
   gameManager: {fileID: 0}
@@ -3256,7 +3394,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   towerPrefab: {fileID: 8322047556177581262, guid: 200d9da512963044da03dc2a1e2030f1, type: 3}
-  price: 1000
+  price: 1500
   priceText: {fileID: 1731489333}
   shopScreen: {fileID: 15158916}
   gameManager: {fileID: 0}
@@ -3564,7 +3702,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weapon: {fileID: 11400000, guid: 23ef04ba99de7a147826e690e2563b5a, type: 2}
-  price: 1600
+  price: 2000
   bought: 0
   equipped: 0
   stateText: {fileID: 404836221}
@@ -4341,7 +4479,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   towerPrefab: {fileID: 7710424567005136794, guid: b933d8ab08c6142479e04d602438b790, type: 3}
-  price: 1800
+  price: 3300
   priceText: {fileID: 2039855252}
   shopScreen: {fileID: 15158916}
   gameManager: {fileID: 0}
@@ -5167,7 +5305,7 @@ GameObject:
   - component: {fileID: 5755642803443366608}
   - component: {fileID: 89455496}
   m_Layer: 5
-  m_Name: MissileLauncherProduct
+  m_Name: CoinMachineProduct
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5301,8 +5439,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dae5e78290ffe9c4e8b0bd19329bb17c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  towerPrefab: {fileID: 7057405351761855000, guid: d91b821e2d2877d4686a4b764edea836, type: 3}
-  price: 1300
+  towerPrefab: {fileID: 8703009953049454774, guid: acc92240f3bd04443aaef6390ffd92b5, type: 3}
+  price: 1800
   priceText: {fileID: 1995396162}
   shopScreen: {fileID: 15158916}
   gameManager: {fileID: 0}
@@ -5829,7 +5967,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weapon: {fileID: 11400000, guid: 8cb8032be7f119e418b2559d6302a852, type: 2}
-  price: 1300
+  price: 1500
   bought: 0
   equipped: 0
   stateText: {fileID: 852338761}

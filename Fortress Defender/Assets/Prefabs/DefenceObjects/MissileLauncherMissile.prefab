@@ -50,7 +50,7 @@ MonoBehaviour:
   nearbyEnemies: []
   explosionRadius: 7
   damage: 10
-  moveSpeed: 40
+  moveSpeed: 65
   enemyLayer:
     serializedVersion: 2
     m_Bits: 64
@@ -167,7 +167,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.7, y: 0.67431736, z: 0.7}
+  m_Size: {x: 0.9, y: 0.67431736, z: 0.9}
   m_Center: {x: 0, y: 0.33715868, z: -9.582623e-15}
 --- !u!1001 &262943291053177895
 PrefabInstance:

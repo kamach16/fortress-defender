@@ -185,7 +185,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbad8d26c3d5a7541acb67af8618b0cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moneyToAdd: 5
+  moneyToAdd: 50
   timeBetweenGettingMoney: 5
   canAddMoney: 0
 --- !u!1 &8703009953090454286
