@@ -90,11 +90,12 @@ MonoBehaviour:
   enemySpawnPoint: {fileID: 1789704896}
   minZPosSpawnOffset: -8
   maxZPosSpawnOffset: 8
-  timeBetweenSpawns: 2
+  timeBetweenSpawns: 3
   spawnedEnemiesList: []
   killedEnemies: 0
   spawnedEnemies: 0
   enemiesAmountToSpawnPerLevel: 5
+  wavesBetweenNewEnemyType: 4
   waveNumber: 0
   fortress: {fileID: 0}
   playerHealth: {fileID: 0}

@@ -8,8 +8,10 @@ public class SoldierInShopProduct : MonoBehaviour
     [SerializeField] private GameObject soldierPrefab;
     [SerializeField] private Transform soldiersContainer;
     [SerializeField] private int price;
+    [SerializeField] private int billPerDay;
     [SerializeField] private TextMeshProUGUI priceText;
     [SerializeField] private TextMeshProUGUI soldiersAmountText;
+    [SerializeField] private TextMeshProUGUI soldierBillText;
     [SerializeField] private GameManager gameManager;
 
     private int soldiersAmount = 0;
@@ -19,9 +21,20 @@ public class SoldierInShopProduct : MonoBehaviour
         SetVariables();
     }
 
+    private void OnEnable()
+    {
+        PayBill();
+    }
+
+    private void PayBill()
+    {
+        gameManager.SubtractMoney(billPerDay * soldiersAmount);
+    }
+
     private void SetVariables()
     {
         priceText.text = price.ToString() + "$";
+        soldierBillText.text = "X1 - " + billPerDay + "$/DAY";
     }
 
     public void BuySoldier()

@@ -45,5 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lost: 0
+  gamePaused: 0
   currentMoney: 0
   moneyDisplay: {fileID: 0}
+  shopScreen: {fileID: 0}

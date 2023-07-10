@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] public bool lost = false;
+    [SerializeField] private bool gamePaused = false;
     [SerializeField] public int currentMoney;
     [SerializeField] private MoneyDisplay moneyDisplay;
     [SerializeField] private GameObject shopScreen;
@@ -19,6 +20,14 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (gamePaused) Time.timeScale = 1;
+            else Time.timeScale = 0;
+
+            gamePaused = !gamePaused;
         }
     }
 

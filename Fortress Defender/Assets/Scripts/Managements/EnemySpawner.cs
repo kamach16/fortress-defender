@@ -17,6 +17,7 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private int killedEnemies;
     [SerializeField] private int spawnedEnemies;
     [SerializeField] private int enemiesAmountToSpawnPerLevel;
+    [SerializeField] private int wavesBetweenNewEnemyType;
     [SerializeField] private int waveNumber;
 
     [Header("Others")]
@@ -84,9 +85,9 @@ public class EnemySpawner : MonoBehaviour
     {
         enemiesAmountToSpawnPerLevel++;
         waveNumber++;
-        timeBetweenSpawns = Mathf.Max(timeBetweenSpawns - 0.1f, 1);
+        timeBetweenSpawns = Mathf.Max(timeBetweenSpawns - 0.075f, 1);
 
-        if (waveNumber % 3 == 0) // run this condition every 3 waves
+        if (waveNumber % wavesBetweenNewEnemyType == 0) // run this condition every e.g. 3 waves (while wavesBetweenNewEnemyType = 3)
         {
             GameObject newEnemyType = remainingEnemyTypes[0];
             currentEnemyTypesToSpawn.Add(newEnemyType);
