@@ -68,7 +68,7 @@ Material:
     - _OutlineSoftness: 0
     - _OutlineUVSpeedX: 0
     - _OutlineUVSpeedY: 0
-    - _OutlineWidth: 0.265
+    - _OutlineWidth: 0
     - _PerspectiveFilter: 0.875
     - _Reflectivity: 10
     - _ScaleRatioA: 0.9
@@ -86,10 +86,10 @@ Material:
     - _StencilWriteMask: 255
     - _TextureHeight: 1024
     - _TextureWidth: 1024
-    - _UnderlayDilate: 0
-    - _UnderlayOffsetX: 0.54
-    - _UnderlayOffsetY: -0.46
-    - _UnderlaySoftness: 0.301
+    - _UnderlayDilate: -0.174
+    - _UnderlayOffsetX: 0.808
+    - _UnderlayOffsetY: -0.851
+    - _UnderlaySoftness: 0.133
     - _VertexOffsetX: 0
     - _VertexOffsetY: 0
     - _WeightBold: 0.75
@@ -104,7 +104,7 @@ Material:
     - _ReflectFaceColor: {r: 0, g: 0, b: 0, a: 1}
     - _ReflectOutlineColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
-    - _UnderlayColor: {r: 0, g: 0, b: 0, a: 1}
+    - _UnderlayColor: {r: 0, g: 0, b: 0, a: 0.74509805}
   m_BuildTextureStacks: []
 --- !u!114 &11400000
 MonoBehaviour:
@@ -116,11 +116,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
-  m_Name: Anton SDF Shadow
+  m_Name: Anton SDF Shadow 1
   m_EditorClassIdentifier: 
-  hashCode: 246943629
+  hashCode: -1661328740
   material: {fileID: 2140474}
-  materialHashCode: 178979085
+  materialHashCode: -570418244
   m_Version: 1.1.0
   m_SourceFontFileGUID: 997a43b767814dd0a7642ec9b78cba41
   m_SourceFontFile_EditorRef: {fileID: 12800000, guid: 997a43b767814dd0a7642ec9b78cba41, type: 3}
