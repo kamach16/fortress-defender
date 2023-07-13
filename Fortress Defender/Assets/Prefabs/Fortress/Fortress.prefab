@@ -2099,6 +2099,7 @@ MonoBehaviour:
   isReloading: 0
   timeBetweenBulletsIfFullAuto: 0
   isActive: 1
+  canReload: 1
   mainCamera: {fileID: 0}
   groundHitSplatVFX: {fileID: 2884736753201441436, guid: 4e68a81234eb8a3449b1ee604feddbfe, type: 3}
   gameManager: {fileID: 0}

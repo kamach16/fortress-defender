@@ -14,12 +14,14 @@ public class CoinMachineDefenceObject : MonoBehaviour
     {
         GameManager.OnLevelWin += StopAddingMoney;
         GameManager.OnNewLevelStarted += AllowAddingMoney;
+        GameManager.OnDefeat += StopAddingMoney;
     }
 
     private void OnDisable()
     {
         GameManager.OnLevelWin -= StopAddingMoney;
         GameManager.OnNewLevelStarted -= AllowAddingMoney;
+        GameManager.OnDefeat -= StopAddingMoney;
     }
 
     private void Awake()

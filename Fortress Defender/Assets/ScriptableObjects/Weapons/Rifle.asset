@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damagePerHit: 8
   maxAmmo: 30
-  reloadTime: 3
+  reloadTime: 2.5
   fullAuto: 1
   timeBetweenBulletsIfFullAuto: 0.1

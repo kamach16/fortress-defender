@@ -8,15 +8,31 @@ public class HeavyGunDefenceObject : MonoBehaviour
     [SerializeField] private float maxTimeBetweenShoots;
     [SerializeField] private float damagePerHit;
     [SerializeField] private float rotationSpeed;
+    [SerializeField] private bool isActive = true;
     [SerializeField] private ParticleSystem gunShotVFX;
 
     private EnemySpawner enemySpawner;
 
     private int randomEnemyIndex;
 
+    private void OnEnable()
+    {
+        GameManager.OnDefeat += DeactiveDefenceObject;
+    }
+
+    private void OnDisable()
+    {
+        GameManager.OnDefeat -= DeactiveDefenceObject;
+    }
+
     private void Awake()
     {
         SetVariables();
+    }
+
+    private void DeactiveDefenceObject()
+    {
+        isActive = false;
     }
 
     private void SetVariables()
@@ -42,6 +58,8 @@ public class HeavyGunDefenceObject : MonoBehaviour
 
     private void LookAtTarget()
     {
+        if (!isActive) return;
+
         if (enemySpawner.spawnedEnemiesList.Count != 0 && randomEnemyIndex < enemySpawner.spawnedEnemiesList.Count)
         {
             EnemyController targetedEnemy = enemySpawner.spawnedEnemiesList[randomEnemyIndex];
@@ -53,6 +71,8 @@ public class HeavyGunDefenceObject : MonoBehaviour
 
     private void DealDamage()
     {
+        if (!isActive) return;
+
         randomEnemyIndex = Random.Range(0, enemySpawner.spawnedEnemiesList.Count);
 
         if (enemySpawner.spawnedEnemiesList.Count != 0)

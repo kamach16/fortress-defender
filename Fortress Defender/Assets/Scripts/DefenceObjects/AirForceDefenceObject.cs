@@ -7,12 +7,28 @@ public class AirForceDefenceObject : MonoBehaviour
     [SerializeField] private GameObject dronePrefab;
     [SerializeField] private Transform droneSpawnPosition;
     [SerializeField] private float timeBetweenDroneArrival;
+    [SerializeField] private bool isActive = true;
 
     private EnemySpawner enemySpawner;
+
+    private void OnEnable()
+    {
+        GameManager.OnDefeat += DeactiveDefenceObject;
+    }
+
+    private void OnDisable()
+    {
+        GameManager.OnDefeat -= DeactiveDefenceObject;
+    }
 
     private void Awake()
     {
         SetVariables();
+    }
+
+    private void DeactiveDefenceObject()
+    {
+        isActive = false;
     }
 
     private void SetVariables()
@@ -32,6 +48,8 @@ public class AirForceDefenceObject : MonoBehaviour
 
     private void DroneArrival()
     {
+        if (!isActive) return;
+
         if (enemySpawner.spawnedEnemiesList.Count != 0)
         {
             GameObject drone = Instantiate(dronePrefab, droneSpawnPosition.position, dronePrefab.transform.rotation);

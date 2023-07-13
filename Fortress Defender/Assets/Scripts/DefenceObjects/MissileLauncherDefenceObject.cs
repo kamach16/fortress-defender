@@ -7,6 +7,7 @@ public class MissileLauncherDefenceObject : MonoBehaviour
     [SerializeField] private float minTimeBetweenShoots;
     [SerializeField] private float maxTimeBetweenShoots;
     [SerializeField] private float rotationSpeed;
+    [SerializeField] private bool isActive = true;
     [SerializeField] private GameObject missilePrefab;
     [SerializeField] private Transform missileSpawnPositon;
     [SerializeField] private Transform turretModel;
@@ -16,9 +17,24 @@ public class MissileLauncherDefenceObject : MonoBehaviour
 
     private int randomEnemyIndex;
 
+    private void OnEnable()
+    {
+        GameManager.OnDefeat += DeactiveDefenceObject;
+    }
+
+    private void OnDisable()
+    {
+        GameManager.OnDefeat -= DeactiveDefenceObject;
+    }
+
     private void Awake()
     {
         SetVariables();
+    }
+
+    private void DeactiveDefenceObject()
+    {
+        isActive = false;
     }
 
     private void SetVariables()
@@ -44,6 +60,8 @@ public class MissileLauncherDefenceObject : MonoBehaviour
 
     private void LookAtTarget()
     {
+        if (!isActive) return;
+
         if (enemySpawner.spawnedEnemiesList.Count != 0 && randomEnemyIndex < enemySpawner.spawnedEnemiesList.Count)
         {
             EnemyController targetedEnemy = enemySpawner.spawnedEnemiesList[randomEnemyIndex];
@@ -55,6 +73,8 @@ public class MissileLauncherDefenceObject : MonoBehaviour
 
     private void LaunchMissile()
     {
+        if (!isActive) return;
+
         randomEnemyIndex = Random.Range(0, enemySpawner.spawnedEnemiesList.Count);
 
         if (enemySpawner.spawnedEnemiesList.Count != 0)

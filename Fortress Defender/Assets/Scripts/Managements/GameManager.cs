@@ -10,10 +10,12 @@ public class GameManager : MonoBehaviour
     [SerializeField] public int currentMoney;
     [SerializeField] private MoneyDisplay moneyDisplay;
     [SerializeField] private GameObject shopScreen;
+    [SerializeField] private GameObject defeatScreen;
 
     public delegate void Action();
     public static event Action OnLevelWin;
     public static event Action OnNewLevelStarted;
+    public static event Action OnDefeat;
 
     private void Update()
     {
@@ -50,7 +52,9 @@ public class GameManager : MonoBehaviour
     public void LoseGame()
     {
         lost = true;
-        Debug.Log("You lost the game");
+        defeatScreen.SetActive(true);
+
+        if (OnDefeat != null) OnDefeat();
     }
 
     public void AddMoney(int moneyToAdd)

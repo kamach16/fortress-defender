@@ -14,6 +14,7 @@ public class PlayerShooting : MonoBehaviour
     [SerializeField] private bool isReloading;
     [SerializeField] private float timeBetweenBulletsIfFullAuto;
     [SerializeField] private bool isActive;
+    [SerializeField] private bool canReload = true;
 
     [SerializeField] private Camera mainCamera;
     [SerializeField] private GameObject groundHitSplatVFX;
@@ -31,12 +32,16 @@ public class PlayerShooting : MonoBehaviour
     {
         GameManager.OnLevelWin += DeactiveWeapon;
         GameManager.OnNewLevelStarted += ActiveWeapon;
+        GameManager.OnDefeat += DeactiveWeapon;
+        GameManager.OnDefeat += DontAllowReload;
     }
 
     private void OnDisable()
     {
         GameManager.OnLevelWin -= DeactiveWeapon;
         GameManager.OnNewLevelStarted -= ActiveWeapon;
+        GameManager.OnDefeat -= DeactiveWeapon;
+        GameManager.OnDefeat -= DontAllowReload;
     }
 
     private void Update()
@@ -54,6 +59,11 @@ public class PlayerShooting : MonoBehaviour
     private void ActiveWeapon()
     {
         isActive = true;
+    }
+
+    private void DontAllowReload()
+    {
+        canReload = false;
     }
 
     public void SelectWeapon(Weapon newWeapon)
@@ -131,6 +141,8 @@ public class PlayerShooting : MonoBehaviour
 
     private void Reloading()
     {
+        if (!canReload) return;
+
         if (Input.GetButtonDown("Fire2") && !isReloading)
         {
             StopShooting();
