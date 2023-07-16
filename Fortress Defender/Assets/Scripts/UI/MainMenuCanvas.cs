@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class MainMenuCanvas : MonoBehaviour
 {
     [SerializeField] private GameObject howToPlayScreen;
+    [SerializeField] private GameObject leaderboardScreen;
 
     public void PlayGame()
     {
@@ -15,7 +16,7 @@ public class MainMenuCanvas : MonoBehaviour
 
     public void LeaderBoard()
     {
-        // open leaderboard
+        leaderboardScreen.SetActive(true);
     }
 
     public void OpenHowToPlay()

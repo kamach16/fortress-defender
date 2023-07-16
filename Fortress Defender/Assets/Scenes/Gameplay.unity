@@ -12045,6 +12045,10 @@ PrefabInstance:
       propertyPath: soldiersContainer
       value: 
       objectReference: {fileID: 316456418}
+    - target: {fileID: 1791696980, guid: 7e76d889aeed46c4fa2057ebd096d818, type: 3}
+      propertyPath: enemySpawner
+      value: 
+      objectReference: {fileID: 1328342743}
     - target: {fileID: 1900442308, guid: 7e76d889aeed46c4fa2057ebd096d818, type: 3}
       propertyPath: gameManager
       value: 

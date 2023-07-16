@@ -8,6 +8,7 @@ public class DefeatScreen : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI wavesText;
     [SerializeField] private EnemySpawner enemySpawner;
+    [SerializeField] private GameObject leaderboardScreen;
 
     private void OnEnable()
     {
@@ -31,6 +32,6 @@ public class DefeatScreen : MonoBehaviour
 
     public void Leaderboard()
     {
-        // open leaderboard
+        leaderboardScreen.SetActive(true);
     }
 }

@@ -5,28 +5,23 @@ using UnityEngine;
 
 namespace Dan.Demo
 {
-    public class LeaderboardShowcase : MonoBehaviour
+    public class Leaderboard : MonoBehaviour
     {
         [SerializeField] private string _leaderboardPublicKey;
-        
-        [SerializeField] private TextMeshProUGUI _playerScoreText;
         [SerializeField] private TextMeshProUGUI[] _entryFields;
-        
         [SerializeField] private TMP_InputField _playerUsernameInput;
+        [SerializeField] private EnemySpawner enemySpawner;
 
-        private int _playerScore;
-        
         private void Start()
         {
             Load();
         }
 
-        public void AddPlayerScore()
+        public void CloseLeaderboard()
         {
-            _playerScore++;
-            _playerScoreText.text = "Your score: " + _playerScore;
+            gameObject.SetActive(false);
         }
-        
+
         public void Load() => LeaderboardCreator.GetLeaderboard(_leaderboardPublicKey, OnLeaderboardLoaded);
 
         private void OnLeaderboardLoaded(Entry[] entries)
@@ -35,7 +30,7 @@ namespace Dan.Demo
             {
                 entryField.text = "";
             }
-            
+
             for (int i = 0; i < entries.Length; i++)
             {
                 _entryFields[i].text = $"{entries[i].RankSuffix()}.      {entries[i].Username}      {entries[i].Score} WAVES";
@@ -44,9 +39,9 @@ namespace Dan.Demo
 
         public void Submit()
         {
-            LeaderboardCreator.UploadNewEntry(_leaderboardPublicKey, _playerUsernameInput.text, _playerScore, Callback, ErrorCallback);
+            LeaderboardCreator.UploadNewEntry(_leaderboardPublicKey, _playerUsernameInput.text, enemySpawner.waveNumber, Callback, ErrorCallback);
         }
-        
+
         public void DeleteEntry()
         {
             LeaderboardCreator.DeleteEntry(_leaderboardPublicKey, Callback, ErrorCallback);
@@ -56,13 +51,13 @@ namespace Dan.Demo
         {
             LeaderboardCreator.ResetPlayer();
         }
-        
+
         private void Callback(bool success)
         {
             if (success)
                 Load();
         }
-        
+
         private void ErrorCallback(string error)
         {
             Debug.LogError(error);
