@@ -11,11 +11,14 @@ public class GameManager : MonoBehaviour
     [SerializeField] private MoneyDisplay moneyDisplay;
     [SerializeField] private GameObject shopScreen;
     [SerializeField] private GameObject defeatScreen;
+    [SerializeField] private GameObject pauseScreen;
 
     public delegate void Action();
     public static event Action OnLevelWin;
     public static event Action OnNewLevelStarted;
     public static event Action OnDefeat;
+    public static event Action OnPause;
+    public static event Action OnUnpause;
 
     private void Update()
     {
@@ -24,13 +27,25 @@ public class GameManager : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
 
-        if(Input.GetKeyDown(KeyCode.Escape))
-        {
-            if (gamePaused) Time.timeScale = 1;
-            else Time.timeScale = 0;
+        if (Input.GetKeyDown(KeyCode.Escape)) PauseOrUnpauseGame();
+    }
 
-            gamePaused = !gamePaused;
+    public void PauseOrUnpauseGame()
+    {
+        if (gamePaused) // unpause
+        {
+            Time.timeScale = 1;
+            pauseScreen.SetActive(false);
+            if (OnUnpause != null) OnUnpause();
         }
+        else // pause
+        {
+            Time.timeScale = 0;
+            pauseScreen.SetActive(true);
+            if (OnPause != null) OnPause();
+        }
+
+        gamePaused = !gamePaused;
     }
 
     public void WinLevel()

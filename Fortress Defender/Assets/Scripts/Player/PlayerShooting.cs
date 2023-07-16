@@ -34,6 +34,10 @@ public class PlayerShooting : MonoBehaviour
         GameManager.OnNewLevelStarted += ActiveWeapon;
         GameManager.OnDefeat += DeactiveWeapon;
         GameManager.OnDefeat += DontAllowReload;
+        GameManager.OnPause += DeactiveWeapon;
+        GameManager.OnPause += DontAllowReload;
+        GameManager.OnUnpause += ActiveWeapon;
+        GameManager.OnUnpause += AllowReload;
     }
 
     private void OnDisable()
@@ -42,6 +46,10 @@ public class PlayerShooting : MonoBehaviour
         GameManager.OnNewLevelStarted -= ActiveWeapon;
         GameManager.OnDefeat -= DeactiveWeapon;
         GameManager.OnDefeat -= DontAllowReload;
+        GameManager.OnPause -= DeactiveWeapon;
+        GameManager.OnPause -= DontAllowReload;
+        GameManager.OnUnpause -= ActiveWeapon;
+        GameManager.OnUnpause -= AllowReload;
     }
 
     private void Update()
@@ -64,6 +72,11 @@ public class PlayerShooting : MonoBehaviour
     private void DontAllowReload()
     {
         canReload = false;
+    }
+
+    private void AllowReload()
+    {
+        canReload = true;
     }
 
     public void SelectWeapon(Weapon newWeapon)

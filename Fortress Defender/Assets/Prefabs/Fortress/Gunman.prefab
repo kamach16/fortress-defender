@@ -47,4 +47,4 @@ MonoBehaviour:
   enemySpawner: {fileID: 0}
   minTimeBetweenShoots: 3
   maxTimeBetweenShoots: 4
-  damagePerHit: 2
+  damagePerHit: 4

@@ -50,3 +50,4 @@ MonoBehaviour:
   moneyDisplay: {fileID: 0}
   shopScreen: {fileID: 0}
   defeatScreen: {fileID: 0}
+  pauseScreen: {fileID: 0}
