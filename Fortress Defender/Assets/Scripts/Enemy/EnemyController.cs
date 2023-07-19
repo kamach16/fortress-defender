@@ -82,7 +82,7 @@ public class EnemyController : MonoBehaviour
     public void DoDamage() // animation event
     {
         gunShotVFX.Play();
-        playerHealth.TakeDamage(damage);
+        if (playerHealth != null) playerHealth.TakeDamage(damage);
     }
 
     // HEALTH SECTION
