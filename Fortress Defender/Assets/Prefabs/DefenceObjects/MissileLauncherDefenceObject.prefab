@@ -247,6 +247,7 @@ MonoBehaviour:
   minTimeBetweenShoots: 3
   maxTimeBetweenShoots: 4
   rotationSpeed: 25
+  isActive: 1
   missilePrefab: {fileID: 245095986909110206, guid: 2c8b878ac27300c419a2e607ac526748, type: 3}
   missileSpawnPositon: {fileID: 6141630425596212677}
   turretModel: {fileID: 8779379401772066953}
