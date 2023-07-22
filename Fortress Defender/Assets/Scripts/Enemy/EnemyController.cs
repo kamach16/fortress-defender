@@ -25,6 +25,7 @@ public class EnemyController : MonoBehaviour
     [SerializeField] private Transform fortress;
     [SerializeField] private PlayerHealth playerHealth;
     [SerializeField] private GameManager gameManager;
+    [SerializeField] private AudioSource audioSource;
 
     private EnemySpawner enemySpawner;
 
@@ -82,6 +83,8 @@ public class EnemyController : MonoBehaviour
     public void DoDamage() // animation event
     {
         gunShotVFX.Play();
+        audioSource.Play();
+
         if (playerHealth != null) playerHealth.TakeDamage(damage);
     }
 

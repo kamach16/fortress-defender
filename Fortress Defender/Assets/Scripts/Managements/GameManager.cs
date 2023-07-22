@@ -13,6 +13,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject defeatScreen;
     [SerializeField] private GameObject pauseScreen;
 
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip defeatSound;
+    [SerializeField] private AudioClip winLevelSound;
+
     public delegate void Action();
     public static event Action OnLevelWin;
     public static event Action OnNewLevelStarted;
@@ -53,6 +57,7 @@ public class GameManager : MonoBehaviour
         if (lost) return;
 
         shopScreen.SetActive(true);
+        PlaySound(winLevelSound);
 
         if (OnLevelWin != null) OnLevelWin();
     }
@@ -68,6 +73,7 @@ public class GameManager : MonoBehaviour
     {
         lost = true;
         defeatScreen.SetActive(true);
+        PlaySound(defeatSound);
 
         if (OnDefeat != null) OnDefeat();
     }
@@ -82,5 +88,10 @@ public class GameManager : MonoBehaviour
     {
         currentMoney -= moneyToSubtract;
         moneyDisplay.UpdateMoneyText(currentMoney);
+    }
+
+    private void PlaySound(AudioClip clipToPlay)
+    {
+        audioSource.PlayOneShot(clipToPlay);
     }
 }

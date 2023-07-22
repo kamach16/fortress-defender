@@ -12,6 +12,7 @@ public class LaserDefenceObject : MonoBehaviour
     [SerializeField] private Transform laserSpawnPositon;
     [SerializeField] private Transform turretModel;
     [SerializeField] private ParticleSystem launchLaserVFX;
+    [SerializeField] private AudioSource audioSource;
 
     private EnemySpawner enemySpawner;
 
@@ -81,6 +82,7 @@ public class LaserDefenceObject : MonoBehaviour
         {
             GameObject laser = Instantiate(laserPrefab, laserSpawnPositon.position, laserSpawnPositon.rotation);
             launchLaserVFX.Play();
+            audioSource.Play();
         }
     }
 }
