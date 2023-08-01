@@ -11,6 +11,7 @@ public class Missile : MonoBehaviour
     [SerializeField] private LayerMask enemyLayer;
     [SerializeField] private ParticleSystem explosionVFX;
     [SerializeField] private GameObject model;
+    [SerializeField] private AudioSource audioSource;
 
     private void Update()
     {
@@ -44,6 +45,7 @@ public class Missile : MonoBehaviour
 
         explosionVFX.Play();
         model.SetActive(false);
+        audioSource.Play();
         Destroy(gameObject, 3);
     }
 

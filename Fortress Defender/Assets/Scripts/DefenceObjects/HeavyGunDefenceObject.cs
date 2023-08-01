@@ -10,6 +10,7 @@ public class HeavyGunDefenceObject : MonoBehaviour
     [SerializeField] private float rotationSpeed;
     [SerializeField] private bool isActive = true;
     [SerializeField] private ParticleSystem gunShotVFX;
+    [SerializeField] private AudioSource audioSource;
 
     private EnemySpawner enemySpawner;
 
@@ -66,6 +67,12 @@ public class HeavyGunDefenceObject : MonoBehaviour
 
             Quaternion targetRotation = Quaternion.LookRotation(transform.position - targetedEnemy.transform.position);
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+
+            if (!audioSource.isPlaying) audioSource.Play();
+        }
+        else
+        {
+            audioSource.Stop();
         }
     }
 

@@ -8,6 +8,7 @@ public class Gunman : MonoBehaviour
     [SerializeField] private float minTimeBetweenShoots;
     [SerializeField] private float maxTimeBetweenShoots;
     [SerializeField] private float damagePerHit;
+    [SerializeField] private AudioSource audioSource;
 
     private void Awake()
     {
@@ -39,6 +40,8 @@ public class Gunman : MonoBehaviour
             EnemyController targetedEnemy = enemySpawner.spawnedEnemiesList[randomEnemyIndex];
 
             targetedEnemy.TakeDamage(damagePerHit, targetedEnemy.transform.position + new Vector3(0, 1.5f, 0));
+
+            audioSource.Play();
         }
     }
 }

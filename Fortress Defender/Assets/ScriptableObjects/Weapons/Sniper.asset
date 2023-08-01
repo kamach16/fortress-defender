@@ -17,3 +17,5 @@ MonoBehaviour:
   reloadTime: 3
   fullAuto: 0
   timeBetweenBulletsIfFullAuto: 0
+  shootSFX: {fileID: 8300000, guid: 1517ca95e2cc91644805b71a0a034022, type: 3}
+  reloadSFX: {fileID: 8300000, guid: 60bd52886830766478146bea947eba03, type: 3}

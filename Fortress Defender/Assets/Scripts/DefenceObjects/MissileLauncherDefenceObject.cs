@@ -12,6 +12,7 @@ public class MissileLauncherDefenceObject : MonoBehaviour
     [SerializeField] private Transform missileSpawnPositon;
     [SerializeField] private Transform turretModel;
     [SerializeField] private ParticleSystem launchMissileVFX;
+    [SerializeField] private AudioSource audioSource;
 
     private EnemySpawner enemySpawner;
 
@@ -81,6 +82,7 @@ public class MissileLauncherDefenceObject : MonoBehaviour
         {
             GameObject missile = Instantiate(missilePrefab, missileSpawnPositon.position, missileSpawnPositon.rotation);
             launchMissileVFX.Play();
+            audioSource.Play();
             Destroy(missile, 5);
         }
     }

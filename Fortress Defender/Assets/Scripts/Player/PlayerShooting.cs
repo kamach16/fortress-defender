@@ -15,11 +15,14 @@ public class PlayerShooting : MonoBehaviour
     [SerializeField] private float timeBetweenBulletsIfFullAuto;
     [SerializeField] private bool isActive;
     [SerializeField] private bool canReload = true;
+    [SerializeField] private AudioClip shootSFX;
+    [SerializeField] private AudioClip reloadSFX;
 
     [SerializeField] private Camera mainCamera;
     [SerializeField] private GameObject groundHitSplatVFX;
     [SerializeField] private GameManager gameManager;
     [SerializeField] private AmmoDisplay ammoDisplay;
+    [SerializeField] private AudioSource audioSource;
 
     private Coroutine shootingCoroutine;
 
@@ -88,6 +91,8 @@ public class PlayerShooting : MonoBehaviour
         reloadTime = currentWeapon.reloadTime;
         fullAuto = currentWeapon.fullAuto;
         timeBetweenBulletsIfFullAuto = currentWeapon.timeBetweenBulletsIfFullAuto;
+        shootSFX = currentWeapon.shootSFX;
+        reloadSFX = currentWeapon.reloadSFX;
 
         currentAmmo = maxAmmo;
         ammoDisplay.UpdateAmmoDisplay(currentAmmo, maxAmmo);
@@ -134,6 +139,8 @@ public class PlayerShooting : MonoBehaviour
         currentAmmo--;
         ammoDisplay.UpdateAmmoDisplay(currentAmmo, maxAmmo);
 
+        audioSource.PlayOneShot(shootSFX);
+
         if (Physics.Raycast(ray, out hit))
         {
             Debug.Log("One bullet fired");
@@ -159,6 +166,8 @@ public class PlayerShooting : MonoBehaviour
         if (Input.GetButtonDown("Fire2") && !isReloading)
         {
             StopShooting();
+
+            audioSource.PlayOneShot(reloadSFX);
 
             ammoDisplay.ammoSlider.value = 0;
             ammoDisplay.ammoSlider.maxValue = 1;

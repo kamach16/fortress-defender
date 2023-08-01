@@ -10,4 +10,6 @@ public class Weapon : ScriptableObject
     public float reloadTime;
     public bool fullAuto;
     public float timeBetweenBulletsIfFullAuto;
+    public AudioClip shootSFX;
+    public AudioClip reloadSFX;
 }
