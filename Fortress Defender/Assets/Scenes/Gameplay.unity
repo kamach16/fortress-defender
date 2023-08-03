@@ -5067,7 +5067,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &927075553
 MeshFilter:
@@ -5236,7 +5236,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 37.589, y: 7.185, z: 0}
 --- !u!114 &963194229
 MonoBehaviour:
@@ -12019,10 +12019,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 108940383}
     - target: {fileID: 8049337472351394842, guid: de06f59af17582c44af210e0d576c1ec, type: 3}
-      propertyPath: firstWeapon
-      value: 
-      objectReference: {fileID: 11400000, guid: 23ef04ba99de7a147826e690e2563b5a, type: 2}
-    - target: {fileID: 8049337472351394842, guid: de06f59af17582c44af210e0d576c1ec, type: 3}
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 1812185288000313007}
@@ -12044,7 +12040,7 @@ PrefabInstance:
       objectReference: {fileID: 1841646892}
     - target: {fileID: 8049337472876036863, guid: de06f59af17582c44af210e0d576c1ec, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8049337472876036863, guid: de06f59af17582c44af210e0d576c1ec, type: 3}
       propertyPath: m_LocalPosition.x

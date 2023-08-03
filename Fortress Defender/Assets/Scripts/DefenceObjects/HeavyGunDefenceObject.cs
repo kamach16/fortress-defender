@@ -65,6 +65,8 @@ public class HeavyGunDefenceObject : MonoBehaviour
         {
             EnemyController targetedEnemy = enemySpawner.spawnedEnemiesList[randomEnemyIndex];
 
+            if (targetedEnemy == null) return;
+
             Quaternion targetRotation = Quaternion.LookRotation(transform.position - targetedEnemy.transform.position);
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
 

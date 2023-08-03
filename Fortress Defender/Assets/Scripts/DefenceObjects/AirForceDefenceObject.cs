@@ -41,8 +41,8 @@ public class AirForceDefenceObject : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(timeBetweenDroneArrival);
             DroneArrival();
+            yield return new WaitForSeconds(timeBetweenDroneArrival);
         }
     }
 
@@ -53,6 +53,7 @@ public class AirForceDefenceObject : MonoBehaviour
         if (enemySpawner.spawnedEnemiesList.Count != 0)
         {
             GameObject drone = Instantiate(dronePrefab, droneSpawnPosition.position, dronePrefab.transform.rotation);
+            drone.GetComponent<DroneDefenceObject>().SetEnemySpawner(enemySpawner);
         }
     }
 }

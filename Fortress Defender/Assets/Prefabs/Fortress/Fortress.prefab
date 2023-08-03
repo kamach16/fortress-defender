@@ -2241,7 +2241,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentWeapon: {fileID: 0}
-  firstWeapon: {fileID: 11400000, guid: 8cb8032be7f119e418b2559d6302a852, type: 2}
+  firstWeapon: {fileID: 11400000, guid: 720b0095ac5b3ba4783064d3b9f62437, type: 2}
   damagePerHit: 0
   maxAmmo: 0
   reloadTime: 0
@@ -2270,7 +2270,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.6
   m_Pitch: 1
   Loop: 0
   Mute: 0

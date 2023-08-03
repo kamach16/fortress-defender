@@ -67,6 +67,8 @@ public class MissileLauncherDefenceObject : MonoBehaviour
         {
             EnemyController targetedEnemy = enemySpawner.spawnedEnemiesList[randomEnemyIndex];
 
+            if (targetedEnemy == null) return;
+
             Quaternion targetRotation = Quaternion.LookRotation(turretModel.position - (targetedEnemy.transform.position + new Vector3(0, 1.5f, 0)));
             turretModel.rotation = Quaternion.Slerp(turretModel.rotation, targetRotation, rotationSpeed * Time.deltaTime);
         }

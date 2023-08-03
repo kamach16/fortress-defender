@@ -93,6 +93,7 @@ public class EnemyController : MonoBehaviour
     {
         gunShotVFX.Play();
 
+        if (audioSource != null) audioSource.Play();
         if (playerHealth != null) playerHealth.TakeDamage(damage);
     }
 
