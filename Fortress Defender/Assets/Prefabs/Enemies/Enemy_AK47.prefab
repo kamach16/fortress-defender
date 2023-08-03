@@ -182,6 +182,9 @@ MonoBehaviour:
   playerHealth: {fileID: 0}
   gameManager: {fileID: 0}
   audioSource: {fileID: -5496103228839890142}
+  footStepsSFX:
+  - {fileID: 8300000, guid: 071ea7638db4d494e9432b95ea47fd54, type: 3}
+  - {fileID: 8300000, guid: dc4a6226afe02ad49814cf493979abb5, type: 3}
 --- !u!136 &5416044132631227844
 CapsuleCollider:
   m_ObjectHideFlags: 0

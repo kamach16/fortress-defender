@@ -26,6 +26,7 @@ public class EnemyController : MonoBehaviour
     [SerializeField] private PlayerHealth playerHealth;
     [SerializeField] private GameManager gameManager;
     [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip[] footStepsSFX;
 
     private EnemySpawner enemySpawner;
 
@@ -74,6 +75,14 @@ public class EnemyController : MonoBehaviour
         }
     }
 
+    public void PlayStepSFX() // animation event
+    {
+        if (audioSource == null) return;
+
+        AudioClip randomAudioClip = footStepsSFX[Random.Range(0, footStepsSFX.Length)];
+        audioSource.PlayOneShot(randomAudioClip);
+    }
+
     // SHOOTING SECTION
     private void Shooting()
     {
@@ -83,7 +92,6 @@ public class EnemyController : MonoBehaviour
     public void DoDamage() // animation event
     {
         gunShotVFX.Play();
-        audioSource.Play();
 
         if (playerHealth != null) playerHealth.TakeDamage(damage);
     }

@@ -48148,6 +48148,7 @@ MonoBehaviour:
   playerHealth: {fileID: 0}
   gameManager: {fileID: 0}
   audioSource: {fileID: 0}
+  footStepsSFX: []
 --- !u!95 &2234520439150509838
 Animator:
   serializedVersion: 4
@@ -48224,6 +48225,7 @@ MonoBehaviour:
   playerHealth: {fileID: 0}
   gameManager: {fileID: 0}
   audioSource: {fileID: 0}
+  footStepsSFX: []
 --- !u!4 &2528202186892754918
 Transform:
   m_ObjectHideFlags: 0
@@ -92358,6 +92360,7 @@ MonoBehaviour:
   playerHealth: {fileID: 0}
   gameManager: {fileID: 0}
   audioSource: {fileID: 0}
+  footStepsSFX: []
 --- !u!64 &4167571374074186760
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -112217,7 +112220,8 @@ MonoBehaviour:
   fortress: {fileID: 190315202}
   playerHealth: {fileID: 0}
   gameManager: {fileID: 0}
-  audioSource: {fileID: 8181590965424143908}
+  audioSource: {fileID: 0}
+  footStepsSFX: []
 --- !u!95 &8172074534579342959
 Animator:
   serializedVersion: 4
@@ -113493,6 +113497,7 @@ MonoBehaviour:
   playerHealth: {fileID: 0}
   gameManager: {fileID: 0}
   audioSource: {fileID: 0}
+  footStepsSFX: []
 --- !u!95 &8228331622239115774
 Animator:
   serializedVersion: 4
