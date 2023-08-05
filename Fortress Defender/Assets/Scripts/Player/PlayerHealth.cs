@@ -12,6 +12,7 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private GameManager gameManager;
     [SerializeField] private PlayerHealthDisplay playerHealthDisplay;
     [SerializeField] private PlayerShieldDisplay playerShieldDisplay;
+    [SerializeField] private AudioSource audioSource;
 
     public void TakeDamage(float damage)
     {
@@ -21,6 +22,7 @@ public class PlayerHealth : MonoBehaviour
         {
             health = Mathf.Max(health - damage, 0); // if health will be below 0, then return 0
             playerHealthDisplay.UpdateHealth(health);
+            audioSource.Play();
         }
         else if (shield > 0)
         {
@@ -33,6 +35,7 @@ public class PlayerHealth : MonoBehaviour
 
             shield = Mathf.Max(shield - damage, 0); // if shield will be below 0, then return 0
             playerShieldDisplay.UpdateShield(shield);
+            audioSource.Play();
         }
 
         if (health <= 0)

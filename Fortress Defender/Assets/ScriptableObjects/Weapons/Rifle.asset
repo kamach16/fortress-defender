@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Rifle
   m_EditorClassIdentifier: 
   damagePerHit: 8
-  maxAmmo: 30
+  maxAmmo: 123123
   reloadTime: 2.5
   fullAuto: 1
   timeBetweenBulletsIfFullAuto: 0.1

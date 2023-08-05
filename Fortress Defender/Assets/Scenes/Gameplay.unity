@@ -11885,6 +11885,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemySpawner
       objectReference: {fileID: 0}
+    - target: {fileID: 4864753785132998299, guid: bcdc1bc906f3bb94ea8a492e30fb2ed8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4864753785132998300, guid: bcdc1bc906f3bb94ea8a492e30fb2ed8, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -12018,6 +12022,10 @@ PrefabInstance:
       propertyPath: ammoDisplay
       value: 
       objectReference: {fileID: 108940383}
+    - target: {fileID: 8049337472351394842, guid: de06f59af17582c44af210e0d576c1ec, type: 3}
+      propertyPath: firstWeapon
+      value: 
+      objectReference: {fileID: 11400000, guid: 8cb8032be7f119e418b2559d6302a852, type: 2}
     - target: {fileID: 8049337472351394842, guid: de06f59af17582c44af210e0d576c1ec, type: 3}
       propertyPath: gameManager
       value: 
