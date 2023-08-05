@@ -34,6 +34,7 @@ public class HeavyGunDefenceObject : MonoBehaviour
     private void DeactiveDefenceObject()
     {
         isActive = false;
+        audioSource.Stop();
     }
 
     private void SetVariables()
