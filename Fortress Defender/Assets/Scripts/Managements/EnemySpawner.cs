@@ -85,7 +85,7 @@ public class EnemySpawner : MonoBehaviour
     {
         enemiesAmountToSpawnPerLevel++;
         waveNumber++;
-        timeBetweenSpawns = Mathf.Max(timeBetweenSpawns - 0.075f, 0.5f);
+        timeBetweenSpawns = Mathf.Max(timeBetweenSpawns - 0.065f, 0.6f);
 
         if (waveNumber % wavesBetweenNewEnemyType == 0) // run this condition every e.g. 3 waves (while wavesBetweenNewEnemyType = 3)
         {

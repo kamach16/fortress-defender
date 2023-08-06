@@ -17,6 +17,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private AudioClip defeatSound;
     [SerializeField] private AudioClip winLevelSound;
 
+    private bool canPause = true;
+
     public delegate void Action();
     public static event Action OnLevelWin;
     public static event Action OnNewLevelStarted;
@@ -36,16 +38,20 @@ public class GameManager : MonoBehaviour
 
     public void PauseOrUnpauseGame()
     {
+        if (!canPause) return;
+
         if (gamePaused) // unpause
         {
             Time.timeScale = 1;
             pauseScreen.SetActive(false);
+            AudioListener.pause = false;
             if (OnUnpause != null) OnUnpause();
         }
         else // pause
         {
             Time.timeScale = 0;
             pauseScreen.SetActive(true);
+            AudioListener.pause = true;
             if (OnPause != null) OnPause();
         }
 
@@ -58,6 +64,7 @@ public class GameManager : MonoBehaviour
 
         shopScreen.SetActive(true);
         PlaySound(winLevelSound);
+        canPause = false;
 
         if (OnLevelWin != null) OnLevelWin();
     }
@@ -65,6 +72,7 @@ public class GameManager : MonoBehaviour
     public void ContinueGame()
     {
         shopScreen.SetActive(false);
+        canPause = true;
 
         if (OnNewLevelStarted != null) OnNewLevelStarted();
     }
@@ -74,6 +82,7 @@ public class GameManager : MonoBehaviour
         lost = true;
         defeatScreen.SetActive(true);
         PlaySound(defeatSound);
+        canPause = false;
 
         if (OnDefeat != null) OnDefeat();
     }

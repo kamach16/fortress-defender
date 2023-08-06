@@ -16,6 +16,12 @@ public class HeavyGunDefenceObject : MonoBehaviour
 
     private int randomEnemyIndex;
 
+    private void Awake()
+    {
+        DestroyAudioSourceIfNotNeeded();
+        SetVariables();
+    }
+
     private void OnEnable()
     {
         GameManager.OnDefeat += DeactiveDefenceObject;
@@ -26,20 +32,20 @@ public class HeavyGunDefenceObject : MonoBehaviour
         GameManager.OnDefeat -= DeactiveDefenceObject;
     }
 
-    private void Awake()
-    {
-        SetVariables();
-    }
-
     private void DeactiveDefenceObject()
     {
         isActive = false;
-        audioSource.Stop();
+        if (audioSource != null) audioSource.Stop();
     }
 
     private void SetVariables()
     {
         enemySpawner = FindObjectOfType<EnemySpawner>();
+    }
+
+    private void DestroyAudioSourceIfNotNeeded()
+    {
+        if (FindObjectsOfType<HeavyGunDefenceObject>().Length > 1) Destroy(audioSource); // this condition checks if there is more than one heavy gun defence object
     }
 
     private IEnumerator Start()
@@ -71,11 +77,11 @@ public class HeavyGunDefenceObject : MonoBehaviour
             Quaternion targetRotation = Quaternion.LookRotation(transform.position - targetedEnemy.transform.position);
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
 
-            if (!audioSource.isPlaying) audioSource.Play();
+            if (audioSource != null && !audioSource.isPlaying) audioSource.Play();
         }
         else
         {
-            audioSource.Stop();
+            if (audioSource != null) audioSource.Stop();
         }
     }
 
